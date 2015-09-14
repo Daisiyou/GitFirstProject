@@ -1,0 +1,22 @@
+//
+//  config.pch
+//  GitFirst
+//
+//  Created by Daisiyou on 15/9/14.
+//  Copyright (c) 2015年 minshengec. All rights reserved.
+//
+
+#ifndef GitFirst_config_pch
+#define GitFirst_config_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import"AFNetworking.h"
+#import"MJRefresh.h"
+#import"Masonry.h"
+#import"SVProgressHUD.h"
+#import"MJExtension.h"
+#import "MSConfig.h"
+
+#endif
