@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年 飞光普. All rights reserved.
 //
 
-#import "MSBaseTableFooterView.h"
+#import "BaseTableFooterView.h"
 
-@implementation MSBaseTableFooterView
+@implementation BaseTableFooterView
 
 /*
 // Only override drawRect: if you perform custom drawing.

@@ -1,21 +1,21 @@
 //
-//  SABaseCollectionReusableView.m
+//  SABaseCollectionViewCell.m
 //  SuperAssistant
 //
 //  Created by 飞光普 on 15/4/27.
 //  Copyright (c) 2015年 飞光普. All rights reserved.
 //
 
-#import "MSBaseCollectionReusableView.h"
+#import "BaseCollectionViewCell.h"
 
-@implementation MSBaseCollectionReusableView
+@implementation BaseCollectionViewCell
 
-+(CGFloat)viewWidth
++(CGFloat)cellWidth
 {
     return 0.0f;
 }
 
-+(CGFloat)viewHeight
++(CGFloat)cellHeight
 {
     return 0.0f;
 }

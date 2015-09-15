@@ -1,5 +1,5 @@
 //
-//  SABaseCollectionReusableView.h
+//  SABaseCollectionViewCell.h
 //  SuperAssistant
 //
 //  Created by 飞光普 on 15/4/27.
@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MSBaseCollectionReusableView : UICollectionReusableView
+@interface BaseCollectionViewCell : UICollectionViewCell
 
-+(CGFloat)viewWidth;
-+(CGFloat)viewHeight;
++(CGFloat)cellWidth;
++(CGFloat)cellHeight;
 
 @end

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 //TableView base cell
-@interface MSBaseTableViewCell : UITableViewCell
+@interface BaseTableViewCell : UITableViewCell
 
 +(CGFloat)cellWidth;
 +(CGFloat)cellHeight;

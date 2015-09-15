@@ -1,5 +1,5 @@
 //
-//  SABaseTableFooterView.h
+//  SABaseTableHeaderView.h
 //  SuperAssistant
 //
 //  Created by 飞光普 on 15/5/27.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MSBaseTableFooterView : UIView
+@interface BaseTableHeaderView : UIView
 
 +(CGFloat)cellWidth;
 +(CGFloat)cellHeight;

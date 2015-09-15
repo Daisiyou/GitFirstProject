@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		6B485615175473CA7B4ACE84 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA6B40A688EEDED95A37803 /* libPods.a */; };
+		B930CF6B1BA7C1BC0039E8BD /* BaseCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B930CF621BA7C1BC0039E8BD /* BaseCollectionReusableView.m */; };
+		B930CF6C1BA7C1BC0039E8BD /* BaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B930CF641BA7C1BC0039E8BD /* BaseCollectionViewCell.m */; };
+		B930CF6D1BA7C1BC0039E8BD /* BaseTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B930CF661BA7C1BC0039E8BD /* BaseTableFooterView.m */; };
+		B930CF6E1BA7C1BC0039E8BD /* BaseTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B930CF681BA7C1BC0039E8BD /* BaseTableHeaderView.m */; };
+		B930CF6F1BA7C1BC0039E8BD /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B930CF6A1BA7C1BC0039E8BD /* BaseTableViewCell.m */; };
 		B9C5D6AE1BA6BD2F00331171 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C5D6AD1BA6BD2F00331171 /* main.m */; };
 		B9C5D6B11BA6BD3000331171 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C5D6B01BA6BD3000331171 /* AppDelegate.m */; };
 		B9C5D6B71BA6BD3000331171 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9C5D6B51BA6BD3000331171 /* Main.storyboard */; };
@@ -76,6 +81,16 @@
 /* Begin PBXFileReference section */
 		449C905A65E247D16FB5D7E7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9CA6B40A688EEDED95A37803 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B930CF611BA7C1BC0039E8BD /* BaseCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCollectionReusableView.h; sourceTree = "<group>"; };
+		B930CF621BA7C1BC0039E8BD /* BaseCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCollectionReusableView.m; sourceTree = "<group>"; };
+		B930CF631BA7C1BC0039E8BD /* BaseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCollectionViewCell.h; sourceTree = "<group>"; };
+		B930CF641BA7C1BC0039E8BD /* BaseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCollectionViewCell.m; sourceTree = "<group>"; };
+		B930CF651BA7C1BC0039E8BD /* BaseTableFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableFooterView.h; sourceTree = "<group>"; };
+		B930CF661BA7C1BC0039E8BD /* BaseTableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableFooterView.m; sourceTree = "<group>"; };
+		B930CF671BA7C1BC0039E8BD /* BaseTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableHeaderView.h; sourceTree = "<group>"; };
+		B930CF681BA7C1BC0039E8BD /* BaseTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableHeaderView.m; sourceTree = "<group>"; };
+		B930CF691BA7C1BC0039E8BD /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
+		B930CF6A1BA7C1BC0039E8BD /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
 		B9C5D6A81BA6BD2F00331171 /* GitFirst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitFirst.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C5D6AC1BA6BD2F00331171 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9C5D6AD1BA6BD2F00331171 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -203,6 +218,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B930CF601BA7C1BC0039E8BD /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				B930CF611BA7C1BC0039E8BD /* BaseCollectionReusableView.h */,
+				B930CF621BA7C1BC0039E8BD /* BaseCollectionReusableView.m */,
+				B930CF631BA7C1BC0039E8BD /* BaseCollectionViewCell.h */,
+				B930CF641BA7C1BC0039E8BD /* BaseCollectionViewCell.m */,
+				B930CF651BA7C1BC0039E8BD /* BaseTableFooterView.h */,
+				B930CF661BA7C1BC0039E8BD /* BaseTableFooterView.m */,
+				B930CF671BA7C1BC0039E8BD /* BaseTableHeaderView.h */,
+				B930CF681BA7C1BC0039E8BD /* BaseTableHeaderView.m */,
+				B930CF691BA7C1BC0039E8BD /* BaseTableViewCell.h */,
+				B930CF6A1BA7C1BC0039E8BD /* BaseTableViewCell.m */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
 		B9C5D69F1BA6BD2F00331171 = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +258,7 @@
 		B9C5D6AA1BA6BD2F00331171 /* GitFirst */ = {
 			isa = PBXGroup;
 			children = (
+				B930CF601BA7C1BC0039E8BD /* BaseView */,
 				B9C5D6EA1BA6D05800331171 /* BaseController */,
 				B9C5D7021BA6D05800331171 /* BaseModel */,
 				B9C5D7091BA6D05800331171 /* Categories */,
@@ -613,10 +646,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9C5D7971BA6D05800331171 /* ControlFactory.m in Sources */,
+				B930CF6E1BA7C1BC0039E8BD /* BaseTableHeaderView.m in Sources */,
 				B9C5D7731BA6D05800331171 /* UIButton+EnlargeEdge.m in Sources */,
 				B9C5D7951BA6D05800331171 /* HttpNetworkManager.m in Sources */,
 				B9C5D7691BA6D05800331171 /* SlideNavigationController.m in Sources */,
 				B9C5D76E1BA6D05800331171 /* ATCModel.m in Sources */,
+				B930CF6F1BA7C1BC0039E8BD /* BaseTableViewCell.m in Sources */,
 				B9C5D7681BA6D05800331171 /* PanGestureRecognizer.m in Sources */,
 				B9C5D7981BA6D05800331171 /* DateFormatter.m in Sources */,
 				B9C5D7771BA6D05800331171 /* UIViewController+isPresentModal.m in Sources */,
@@ -626,8 +661,10 @@
 				B9C5D7781BA6D05800331171 /* UIViewController+UIRectEdge.m in Sources */,
 				B9C5D76C1BA6D05800331171 /* AnimateTabbarView.m in Sources */,
 				B9C5D7751BA6D05800331171 /* UIColorCategory.m in Sources */,
+				B930CF6B1BA7C1BC0039E8BD /* BaseCollectionReusableView.m in Sources */,
 				B9C5D7641BA6D05800331171 /* BaseCollectionViewController.m in Sources */,
 				B9C5D7721BA6D05800331171 /* NSError+Extend.m in Sources */,
+				B930CF6C1BA7C1BC0039E8BD /* BaseCollectionViewCell.m in Sources */,
 				B9C5D7961BA6D05800331171 /* HttpsNetworkManager.m in Sources */,
 				B9C5D7941BA6D05800331171 /* BaseNetworkManager.m in Sources */,
 				B9C5D6AE1BA6BD2F00331171 /* main.m in Sources */,
@@ -641,6 +678,7 @@
 				B9C5D7701BA6D05800331171 /* SWATCModel+AutoCoding.m in Sources */,
 				B9C5D76B1BA6D05800331171 /* SNNavigationController.m in Sources */,
 				B9C5D76F1BA6D05800331171 /* BaseModel.m in Sources */,
+				B930CF6D1BA7C1BC0039E8BD /* BaseTableFooterView.m in Sources */,
 				B9C5D77A1BA6D05800331171 /* EmptyView.m in Sources */,
 				B9C5D7711BA6D05800331171 /* NSDictionary+RemoveNSNull.m in Sources */,
 			);
