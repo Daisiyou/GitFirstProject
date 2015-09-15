@@ -487,4 +487,23 @@
 {
     _isTime = NO;
 }
+
+-(void)showFromRight{
+    
+    self.left = self.right;
+    [UIView animateWithDuration:(0.3) animations:^{
+        self.left = 0;
+    }];
+}
+
+-(void)dismiss{
+    self.left = 0;
+    CGFloat right = self.right;
+    [UIView animateWithDuration:0.3 animations:^{
+        self.left = right;
+    } completion:^(BOOL finished) {
+        [self removeFromSuperview];
+    }];
+}
+
 @end

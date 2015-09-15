@@ -27,6 +27,9 @@ typedef enum : NSUInteger {
 
 @interface RegisterView : UIView
 
+-(void)showFromRight;
+-(void)dismiss;
+
 // 登录界面
 - (instancetype )initwithFrame:(CGRect)frame
             djRegisterViewType:(DJRegisterViewType)djRegisterViewType      //类型
