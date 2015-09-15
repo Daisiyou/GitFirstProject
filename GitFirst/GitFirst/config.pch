@@ -18,5 +18,6 @@
 #import"SVProgressHUD.h"
 #import"MJExtension.h"
 #import "Config.h"
+#import "IQKeyboardManager.h"
 
 #endif

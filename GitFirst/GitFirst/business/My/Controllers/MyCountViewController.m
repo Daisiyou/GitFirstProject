@@ -7,6 +7,7 @@
 //
 
 #import "MyCountViewController.h"
+#import "RegisterView.h"
 
 @interface MyCountViewController ()
 
@@ -16,9 +17,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   // self.title = @"My";
     [self.view setBackgroundColor:[UIColor yellowColor]];
     // Do any additional setup after loading the view.
+    
+    RegisterView * Register = [[RegisterView alloc]initwithFrame:CGRectMake(0, 100, MS_SCREEN_WIDTH, 400) djRegisterViewType:(DJRegisterViewTypeNoNav) action:^(NSString *acc, NSString *key) {
+        
+        NSLog(@"%@, %@", acc, key);
+    } zcAction:^{
+        NSLog(@"点击了注册");
+    } wjAction:^{
+         NSLog(@"点击了忘记密码");
+    }];
+    
+    [self.view addSubview:Register];
 }
 
 - (void)didReceiveMemoryWarning {
