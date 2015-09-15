@@ -7,6 +7,8 @@
 //
 
 #import "AnimateTabbarView.h"
+#import "TabBarViewController.h"
+#import "SNNavigationController.h"
 
 enum barsize{
     tabitem_width=80,
@@ -60,7 +62,7 @@ enum barsize{
         _firstBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, tabItemWidth, tab_hight)];
         _firstBtn.backgroundColor = [UIColor clearColor];
         _firstBtn.titleLabel.font = [UIFont systemFontOfSize:10.0f];
-        [_firstBtn setTitle:@"统计查询" forState:UIControlStateNormal];
+        [_firstBtn setTitle:@"Home" forState:UIControlStateNormal];
         [_firstBtn setTitleColor:[UIColor colorWithHexString:@"#3c3c3c"] forState:UIControlStateNormal];
         [_firstBtn setTitleColor:[UIColor colorWithHexString:@"#fe640a"] forState:UIControlStateHighlighted];
         [_firstBtn setTitleColor:[UIColor colorWithHexString:@"#fe640a"] forState:UIControlStateSelected];
@@ -76,7 +78,7 @@ enum barsize{
         _secondBtn = [[UIButton alloc] initWithFrame:CGRectMake(tabItemWidth, 0, tabItemWidth, tab_hight)];
         _secondBtn.backgroundColor = [UIColor clearColor];
         _secondBtn.titleLabel.font = [UIFont systemFontOfSize:10.0f];
-        [_secondBtn setTitle:@"门店服务" forState:UIControlStateNormal];
+        [_secondBtn setTitle:@"Product" forState:UIControlStateNormal];
         [_secondBtn setTitleColor:[UIColor colorWithHexString:@"#3c3c3c"] forState:UIControlStateNormal];
         [_secondBtn setTitleColor:[UIColor colorWithHexString:@"#fe640a"] forState:UIControlStateHighlighted];
         [_secondBtn setTitleColor:[UIColor colorWithHexString:@"#fe640a"] forState:UIControlStateSelected];
@@ -91,7 +93,7 @@ enum barsize{
         _thirdBtn = [[UIButton alloc] initWithFrame:CGRectMake(tabItemWidth*2, 0, tabItemWidth, tab_hight)];
         _thirdBtn.backgroundColor = [UIColor clearColor];
         _thirdBtn.titleLabel.font = [UIFont systemFontOfSize:10.0f];
-        [_thirdBtn setTitle:@"我的" forState:UIControlStateNormal];
+        [_thirdBtn setTitle:@"My" forState:UIControlStateNormal];
         [_thirdBtn setTitleColor:[UIColor colorWithHexString:@"#3c3c3c"] forState:UIControlStateNormal];
         [_thirdBtn setTitleColor:[UIColor colorWithHexString:@"#fe640a"] forState:UIControlStateHighlighted];
         [_thirdBtn setTitleColor:[UIColor colorWithHexString:@"#fe640a"] forState:UIControlStateSelected];
@@ -108,7 +110,12 @@ enum barsize{
 
 -(void)callButtonAction:(UIButton *)sender{
     NSInteger value=sender.tag;
-    UITabBarController *tabBarCV = (UITabBarController *)self.window.rootViewController;
+    SNNavigationController * navi = (SNNavigationController*)self.window.rootViewController;
+    
+    TabBarViewController *tabBarCV = nil;
+    if (navi) {
+        tabBarCV = navi.viewControllers[0];
+    }
     if (value==10001) {
         [tabBarCV setSelectedIndex:0];
     }else if (value==10002) {

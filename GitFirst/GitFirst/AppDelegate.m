@@ -7,6 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import "TabBarViewController.h"
+#import "SNNavigationController.h"
+
+#import "HomeViewController.h"
+#import "MyCountViewController.h"
+#import "ProductsViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,8 +23,30 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [self initControllers];
     return YES;
 }
+
+-(void)initControllers{
+    
+    TabBarViewController* tabBarController = [[TabBarViewController alloc]init];
+    
+    HomeViewController* home = [[HomeViewController alloc]init];
+    ProductsViewController* products = [[ProductsViewController alloc]init];
+    MyCountViewController* myCount = [[MyCountViewController alloc]init];
+    tabBarController.viewControllers = @[home,products,myCount];
+    
+     SNNavigationController *navi = [[SNNavigationController alloc]initWithRootViewController: tabBarController];
+    [navi.navigationBar setHidden:YES];
+    
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = navi;
+    [self.window makeKeyAndVisible];
+    
+    [tabBarController initTabBar];
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

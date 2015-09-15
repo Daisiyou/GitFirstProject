@@ -13,6 +13,9 @@
 		B930CF6D1BA7C1BC0039E8BD /* BaseTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B930CF661BA7C1BC0039E8BD /* BaseTableFooterView.m */; };
 		B930CF6E1BA7C1BC0039E8BD /* BaseTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B930CF681BA7C1BC0039E8BD /* BaseTableHeaderView.m */; };
 		B930CF6F1BA7C1BC0039E8BD /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B930CF6A1BA7C1BC0039E8BD /* BaseTableViewCell.m */; };
+		B930CF801BA7C4F80039E8BD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B930CF7F1BA7C4F80039E8BD /* HomeViewController.m */; };
+		B930CF831BA7C5100039E8BD /* MyCountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B930CF821BA7C5100039E8BD /* MyCountViewController.m */; };
+		B930CF861BA7C51F0039E8BD /* ProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B930CF851BA7C51F0039E8BD /* ProductsViewController.m */; };
 		B9C5D6AE1BA6BD2F00331171 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C5D6AD1BA6BD2F00331171 /* main.m */; };
 		B9C5D6B11BA6BD3000331171 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C5D6B01BA6BD3000331171 /* AppDelegate.m */; };
 		B9C5D6B71BA6BD3000331171 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9C5D6B51BA6BD3000331171 /* Main.storyboard */; };
@@ -91,6 +94,12 @@
 		B930CF681BA7C1BC0039E8BD /* BaseTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableHeaderView.m; sourceTree = "<group>"; };
 		B930CF691BA7C1BC0039E8BD /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
 		B930CF6A1BA7C1BC0039E8BD /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
+		B930CF7E1BA7C4F80039E8BD /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		B930CF7F1BA7C4F80039E8BD /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		B930CF811BA7C5100039E8BD /* MyCountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCountViewController.h; sourceTree = "<group>"; };
+		B930CF821BA7C5100039E8BD /* MyCountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCountViewController.m; sourceTree = "<group>"; };
+		B930CF841BA7C51F0039E8BD /* ProductsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductsViewController.h; sourceTree = "<group>"; };
+		B930CF851BA7C51F0039E8BD /* ProductsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductsViewController.m; sourceTree = "<group>"; };
 		B9C5D6A81BA6BD2F00331171 /* GitFirst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitFirst.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C5D6AC1BA6BD2F00331171 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9C5D6AD1BA6BD2F00331171 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -235,6 +244,115 @@
 			path = BaseView;
 			sourceTree = "<group>";
 		};
+		B930CF711BA7C4AB0039E8BD /* business */ = {
+			isa = PBXGroup;
+			children = (
+				B930CF721BA7C4AB0039E8BD /* Home */,
+				B930CF761BA7C4AB0039E8BD /* My */,
+				B930CF7A1BA7C4AB0039E8BD /* Products */,
+			);
+			path = business;
+			sourceTree = "<group>";
+		};
+		B930CF721BA7C4AB0039E8BD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B930CF731BA7C4AB0039E8BD /* Controllers */,
+				B930CF741BA7C4AB0039E8BD /* Models */,
+				B930CF751BA7C4AB0039E8BD /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B930CF731BA7C4AB0039E8BD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B930CF7E1BA7C4F80039E8BD /* HomeViewController.h */,
+				B930CF7F1BA7C4F80039E8BD /* HomeViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B930CF741BA7C4AB0039E8BD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B930CF751BA7C4AB0039E8BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B930CF761BA7C4AB0039E8BD /* My */ = {
+			isa = PBXGroup;
+			children = (
+				B930CF771BA7C4AB0039E8BD /* Controllers */,
+				B930CF781BA7C4AB0039E8BD /* Models */,
+				B930CF791BA7C4AB0039E8BD /* Views */,
+			);
+			path = My;
+			sourceTree = "<group>";
+		};
+		B930CF771BA7C4AB0039E8BD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B930CF811BA7C5100039E8BD /* MyCountViewController.h */,
+				B930CF821BA7C5100039E8BD /* MyCountViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B930CF781BA7C4AB0039E8BD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B930CF791BA7C4AB0039E8BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B930CF7A1BA7C4AB0039E8BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B930CF7B1BA7C4AB0039E8BD /* Controllers */,
+				B930CF7C1BA7C4AB0039E8BD /* Models */,
+				B930CF7D1BA7C4AB0039E8BD /* Views */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		B930CF7B1BA7C4AB0039E8BD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B930CF841BA7C51F0039E8BD /* ProductsViewController.h */,
+				B930CF851BA7C51F0039E8BD /* ProductsViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B930CF7C1BA7C4AB0039E8BD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B930CF7D1BA7C4AB0039E8BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		B9C5D69F1BA6BD2F00331171 = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +376,7 @@
 		B9C5D6AA1BA6BD2F00331171 /* GitFirst */ = {
 			isa = PBXGroup;
 			children = (
+				B930CF711BA7C4AB0039E8BD /* business */,
 				B930CF601BA7C1BC0039E8BD /* BaseView */,
 				B9C5D6EA1BA6D05800331171 /* BaseController */,
 				B9C5D7021BA6D05800331171 /* BaseModel */,
@@ -669,6 +788,7 @@
 				B9C5D7941BA6D05800331171 /* BaseNetworkManager.m in Sources */,
 				B9C5D6AE1BA6BD2F00331171 /* main.m in Sources */,
 				B9C5D7661BA6D05800331171 /* BaseViewController.m in Sources */,
+				B930CF831BA7C5100039E8BD /* MyCountViewController.m in Sources */,
 				B9C5D7791BA6D05800331171 /* Config.m in Sources */,
 				B9C5D76D1BA6D05800331171 /* TabBarViewController.m in Sources */,
 				B9C5D7761BA6D05800331171 /* UIView+Sizes.m in Sources */,
@@ -676,10 +796,12 @@
 				B9C5D7741BA6D05800331171 /* UIButton+Factory.m in Sources */,
 				B9C5D7671BA6D05800331171 /* RefreshViewController.m in Sources */,
 				B9C5D7701BA6D05800331171 /* SWATCModel+AutoCoding.m in Sources */,
+				B930CF801BA7C4F80039E8BD /* HomeViewController.m in Sources */,
 				B9C5D76B1BA6D05800331171 /* SNNavigationController.m in Sources */,
 				B9C5D76F1BA6D05800331171 /* BaseModel.m in Sources */,
 				B930CF6D1BA7C1BC0039E8BD /* BaseTableFooterView.m in Sources */,
 				B9C5D77A1BA6D05800331171 /* EmptyView.m in Sources */,
+				B930CF861BA7C51F0039E8BD /* ProductsViewController.m in Sources */,
 				B9C5D7711BA6D05800331171 /* NSDictionary+RemoveNSNull.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
