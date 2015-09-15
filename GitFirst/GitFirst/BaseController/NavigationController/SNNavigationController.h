@@ -8,7 +8,7 @@
 
 
 #import <Foundation/Foundation.h>
-#import "MSSlideNavigationController.h"
+#import "SlideNavigationController.h"
 
 typedef NS_ENUM(NSUInteger, UI7NavBarSytle)
 {
@@ -19,7 +19,7 @@ typedef NS_ENUM(NSUInteger, UI7NavBarSytle)
     UI7NavBarSytleImage, //自定义图片
     UI7NavBarSytleColor, //自定义色值
 };
-//MSSlideNavigationController
+//SlideNavigationController
 @interface SNNavigationController : UINavigationController <UINavigationControllerDelegate>
 
 @property (nonatomic,assign)UI7NavBarSytle navBarStyle;

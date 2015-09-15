@@ -67,7 +67,7 @@ static BOOL ATCValidateAndSetValue(id obj, NSString *key, id value, BOOL forceUp
 }
 
 
-@implementation MSATCModel(AutoCoding)
+@implementation ATCModel(AutoCoding)
 
 + (BOOL)supportsSecureCoding
 {

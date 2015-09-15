@@ -29,7 +29,7 @@
 //
 //  3. This notice may not be removed or altered from any source distribution.
 //
-#import "MSATCModel.h"
+#import "ATCModel.h"
 
 @protocol SWATCModelProtocol <NSObject>
 @optional
@@ -37,7 +37,7 @@
 - (void)decodeErrorKey:(NSString *)key propertyClass:(Class)clazz obj:(id)obj;
 @end
 
-@interface MSATCModel(AutoCoding)<NSSecureCoding,SWATCModelProtocol>
+@interface ATCModel(AutoCoding)<NSSecureCoding,SWATCModelProtocol>
 //coding
 
 + (NSDictionary *)codableProperties;
