@@ -45,6 +45,9 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    UIImageView * image = [UIImageView new];
+    
+    image.layer.allowsEdgeAntialiasing = YES;
 }
 
 /*

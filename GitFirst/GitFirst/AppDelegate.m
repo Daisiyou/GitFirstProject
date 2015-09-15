@@ -38,7 +38,6 @@
     tabBarController.viewControllers = @[home,products,myCount];
     
      SNNavigationController *navi = [[SNNavigationController alloc]initWithRootViewController: tabBarController];
-    [navi.navigationBar setHidden:YES];
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = navi;

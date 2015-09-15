@@ -17,7 +17,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor redColor]];
+    
+    UIButton  * button = [[UIButton alloc]initWithFrame:CGRectMake(20, 64, 100, 50)];
+    [button setTitle:@"button" forState:(UIControlStateNormal)];
+    [button setTitleColor:[UIColor blackColor] forState:(UIControlStateNormal)];
+    [button addTarget:self action:@selector(nextVC) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:button];
     // Do any additional setup after loading the view.
+}
+
+-(void)nextVC{
+    UIViewController * VC = [[UIViewController alloc]init];
+    [VC.navigationController.navigationBar setHidden:NO];
+    
+    VC.title = @"New VC";
+    [VC.view setBackgroundColor:[UIColor whiteColor]];
+    [self.navigationController pushViewController:VC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -19,5 +19,6 @@
 #import"MJExtension.h"
 #import "Config.h"
 #import "IQKeyboardManager.h"
+#import "UINavigationController+FDFullscreenPopGesture.h"
 
 #endif
