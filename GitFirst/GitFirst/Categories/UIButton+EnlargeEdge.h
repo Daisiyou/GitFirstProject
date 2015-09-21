@@ -1,9 +1,9 @@
 //
 //  UIButton+EnlargeEdge.h
-//  SmartHome
 //
-//  Created by FeiGuangpu on 15-4-17.
-//  Copyright (c) 2015年 赵一峰. All rights reserved.
+//
+//  Created by Daisiyou on 15/9/15.
+//  Copyright (c) 2015年 Daisiyou. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

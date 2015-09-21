@@ -1,0 +1,1 @@
+../../../Bugtags/Bugtags.framework/Versions/A/Headers/BTGConstants.h

@@ -1,9 +1,9 @@
 //
 //  SNNavigationController.h
-//  MinShengEcPjTemplate
 //
-//  Created by ibcker on 13-11-21.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//
+//  Created by Daisiyou on 15/9/15.
+//  Copyright (c) 2015年 Daisiyou. All rights reserved.
 //
 
 

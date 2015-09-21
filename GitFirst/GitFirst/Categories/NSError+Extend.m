@@ -1,9 +1,9 @@
 //
 //  NSError+Extend.m
-//  MinShengEcPjTemplate
 //
-//  Created by 飞 光普 on 14-8-4.
-//  Copyright (c) 2014年 MinShengEcPjTemplate All rights reserved.
+//
+//  Created by Daisiyou on 15/9/15.
+//  Copyright (c) 2015年 Daisiyou. All rights reserved.
 //
 
 #import "NSError+Extend.h"

@@ -1,9 +1,9 @@
 //
 //  MSDispersedAlignment.h
-//  MinShengCrowdfinancing
 //
-//  Created by Daisiyou on 15/7/9.
-//  Copyright (c) 2015年 FeiGuangpu. All rights reserved.
+//
+//  Created by Daisiyou on 15/9/15.
+//  Copyright (c) 2015年 Daisiyou. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

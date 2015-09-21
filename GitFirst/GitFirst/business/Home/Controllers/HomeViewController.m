@@ -3,7 +3,7 @@
 //  GitFirst
 //
 //  Created by Daisiyou on 15/9/15.
-//  Copyright (c) 2015年 minshengec. All rights reserved.
+//  Copyright (c) 2015年 Daisiyou. All rights reserved.
 //
 
 #import "HomeViewController.h"
@@ -23,6 +23,7 @@
     [button setTitleColor:[UIColor blackColor] forState:(UIControlStateNormal)];
     [button addTarget:self action:@selector(nextVC) forControlEvents:(UIControlEventTouchUpInside)];
     [self.view addSubview:button];
+    self.fd_prefersNavigationBarHidden = YES;
     // Do any additional setup after loading the view.
 }
 

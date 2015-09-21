@@ -2,8 +2,9 @@
 //  AppDelegate.m
 //  GitFirst
 //
-//  Created by Daisiyou on 15/9/14.
-//  Copyright (c) 2015年 minshengec. All rights reserved.
+//
+//  Created by Daisiyou on 15/9/15.
+//  Copyright (c) 2015年 Daisiyou. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -14,6 +15,10 @@
 #import "MyCountViewController.h"
 #import "ProductsViewController.h"
 
+#import "Bugtags.h"
+
+NSString* const Appkey = @"cae3a8ae05154f3b28450794df0fe3e2";
+
 @interface AppDelegate ()
 
 @end
@@ -23,6 +28,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [Bugtags startWithAppKey:Appkey invocationEvent:(BTGInvocationEventBubble)];
     
     [self initControllers];
     return YES;
@@ -35,12 +42,15 @@
     HomeViewController* home = [[HomeViewController alloc]init];
     ProductsViewController* products = [[ProductsViewController alloc]init];
     MyCountViewController* myCount = [[MyCountViewController alloc]init];
-    tabBarController.viewControllers = @[home,products,myCount];
+
+    SNNavigationController *naviHome = [[SNNavigationController alloc]initWithRootViewController: home];
+    SNNavigationController *naviProducts= [[SNNavigationController alloc]initWithRootViewController: products];
+    SNNavigationController *naviMycount = [[SNNavigationController alloc]initWithRootViewController: myCount];
     
-     SNNavigationController *navi = [[SNNavigationController alloc]initWithRootViewController: tabBarController];
+    tabBarController.viewControllers = @[naviHome,naviProducts,naviMycount];
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = navi;
+    self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
     
     [tabBarController initTabBar];

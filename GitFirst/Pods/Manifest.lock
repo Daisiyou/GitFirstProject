@@ -20,6 +20,7 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - Bugtags (1.0.6)
   - CHTCollectionViewWaterfallLayout (0.9.1)
   - Masonry (0.6.2)
   - MJExtension (2.0.4)
@@ -38,6 +39,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5.3)
+  - Bugtags
   - CHTCollectionViewWaterfallLayout (~> 0.8)
   - Masonry (~> 0.6.2)
   - MJExtension (~> 2.0.1)
@@ -50,6 +52,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  Bugtags: b4119a1d2e1ecf4fc6e12b69afa2454a22242479
   CHTCollectionViewWaterfallLayout: 1a8da4fc662702cbddda8926ced266036a829f84
   Masonry: 362e8a1cc0beada4a4c4832d5e863da2a51533be
   MJExtension: 90503779f5c2608b76b5b0f41efdb05c080d1976

@@ -1,6 +1,6 @@
 //
 //  UIViewController+UIRectEdge.m
-//  MinShengEcPjTemplate
+//  
 //
 //  Created by iBcker on 13-10-28.
 //

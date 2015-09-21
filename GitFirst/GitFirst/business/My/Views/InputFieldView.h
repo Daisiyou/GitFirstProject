@@ -2,8 +2,8 @@
 //  MSInputFieldView.h
 //  MinShengCrowdfinancing
 //
-//  Created by Daisiyou on 15/7/3.
-//  Copyright (c) 2015年 . All rights reserved.
+//  Created by Daisiyou on 15/9/15.
+//  Copyright (c) 2015年 Daisiyou. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

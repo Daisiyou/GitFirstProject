@@ -1,9 +1,9 @@
 //
 //  SAAnimateTabbarView.m
-//  SuperAssistant
 //
-//  Created by 飞光普 on 15/4/27.
-//  Copyright (c) 2015年 飞光普. All rights reserved.
+//
+//  Created by Daisiyou on 15/9/15.
+//  Copyright (c) 2015年 Daisiyou. All rights reserved.
 //
 
 #import "AnimateTabbarView.h"
@@ -110,18 +110,19 @@ enum barsize{
 
 -(void)callButtonAction:(UIButton *)sender{
     NSInteger value=sender.tag;
-    SNNavigationController * navi = (SNNavigationController*)self.window.rootViewController;
     
-    TabBarViewController *tabBarCV = nil;
-    if (navi) {
-        tabBarCV = navi.viewControllers[0];
+    SNNavigationController * navi = nil;
+    TabBarViewController * tab = (TabBarViewController*)self.window.rootViewController;
+
+    if (tab) {
+        navi = tab.viewControllers[0];
     }
     if (value==10001) {
-        [tabBarCV setSelectedIndex:0];
+        [tab setSelectedIndex:0];
     }else if (value==10002) {
-        [tabBarCV setSelectedIndex:1];
+        [tab setSelectedIndex:1];
     }else if (value==10003) {
-        [tabBarCV setSelectedIndex:2];
+        [tab setSelectedIndex:2];
     }
 }
 

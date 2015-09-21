@@ -48,6 +48,12 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 5
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 4
 
+// Bugtags
+#define COCOAPODS_POD_AVAILABLE_Bugtags
+#define COCOAPODS_VERSION_MAJOR_Bugtags 1
+#define COCOAPODS_VERSION_MINOR_Bugtags 0
+#define COCOAPODS_VERSION_PATCH_Bugtags 6
+
 // CHTCollectionViewWaterfallLayout
 #define COCOAPODS_POD_AVAILABLE_CHTCollectionViewWaterfallLayout
 #define COCOAPODS_VERSION_MAJOR_CHTCollectionViewWaterfallLayout 0

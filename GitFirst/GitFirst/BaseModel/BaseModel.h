@@ -1,9 +1,9 @@
 //
 //  SABaseModel.h
-//  SuperAssistant
 //
-//  Created by 飞光普 on 15/5/6.
-//  Copyright (c) 2015年 飞光普. All rights reserved.
+//
+//  Created by Daisiyou on 15/9/15.
+//  Copyright (c) 2015年 Daisiyou. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

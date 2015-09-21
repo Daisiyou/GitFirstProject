@@ -11,5 +11,5 @@ pod 'CHTCollectionViewWaterfallLayout', '~> 0.8'
 pod 'ZBarSDK', '~> 1.3.1'
 pod 'NJKWebViewProgress', '~> 0.2.3'
 pod 'Masonry', '~> 0.6.2'
-
+pod 'Bugtags'
 

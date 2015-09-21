@@ -1,9 +1,9 @@
 //
 //  UIButton+Factory.m
-//  Gather
 //
-//  Created by huangyong on 14-10-5.
-//  Copyright (c) 2014年 huangyong. All rights reserved.
+//
+//  Created by Daisiyou on 15/9/15.
+//  Copyright (c) 2015年 Daisiyou. All rights reserved.
 //
 
 #import "UIButton+Factory.h"
