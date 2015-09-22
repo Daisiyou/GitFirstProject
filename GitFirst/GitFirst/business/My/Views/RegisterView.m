@@ -99,8 +99,6 @@
 {
     self.djRegisterViewType = djRegisterViewType;
     
-    [IQKeyboardManager sharedManager].enable = YES;
-    
     // 头像
     UIImageView *headIcon = [[UIImageView alloc]
                              initWithFrame:CGRectMake((WIN_WIDTH-100)/2.0, 60, 100, 100)];
@@ -177,58 +175,7 @@
     passImage.tag = 302;
     _minHeight = 340;
 }
-//- (void)textFieldDidBeginEditing:(UITextField *)textField
-//{
-//    CGSize size = [[UIScreen mainScreen] bounds].size;
-//    if (size.width<321) {
-//        NSLog(@"4 4s 5 5s"); // 216
-//        if (_minHeight>WIN_HEIGHT-216-30 && self.djRegisterViewType==0) {
-//            [self setViewY:WIN_HEIGHT-216-30 - _minHeight animation:YES];
-//        }
-//        else if (_minHeight>WIN_HEIGHT-64-216-30 && self.djRegisterViewType==1) {
-//            [self setViewY:WIN_HEIGHT-64-216-30 - _minHeight animation:YES];
-//        }
-//    }
-//    else if (size.width<377){
-//        NSLog(@"6");  // 258
-//        if (_minHeight>WIN_HEIGHT-64-258 && self.djRegisterViewType==0) {
-//            [self setViewY:WIN_HEIGHT-64-258 - _minHeight animation:YES];
-//        }
-//        else if (_minHeight>WIN_HEIGHT-258 && self.djRegisterViewType==1){
-//            [self setViewY:WIN_HEIGHT-258 - _minHeight animation:YES];
-//        }
-//    }
-//    else if (size.width>410){
-//        NSLog(@"6p"); // 271
-//        if (_minHeight>WIN_HEIGHT-64-271 && self.djRegisterViewType==0) {
-//            [self setViewY:WIN_HEIGHT-64-271 - _minHeight animation:YES];
-//        }
-//        else if (_minHeight>WIN_HEIGHT-271 && self.djRegisterViewType==1){
-//            [self setViewY:WIN_HEIGHT-271 - _minHeight animation:YES];
-//        }
-//    }
-//    UIImageView *im = (UIImageView *)[self viewWithTag:textField.tag+100];
-//    im.image = [UIImage imageNamed:@"textfield_activated_holo_light.9.png"];
-//}
-//- (void)textFieldDidEndEditing:(UITextField *)textField
-//{
-//    [self setViewY:0 animation:YES];
-//    UIImageView *im = (UIImageView *)[self viewWithTag:textField.tag+100];
-//    im.image = [UIImage imageNamed:@"textfield_default_holo_light.9.png"];
-//}
-//- (void)setViewY:(double)viewY animation:(BOOL)animation
-//{
-//    CGRect frame = self.frame;
-//    frame.origin.y = viewY;
-//    if (animation) {
-//        [UIView animateWithDuration:0.3 animations:^{
-//            self.frame = frame;
-//        }];
-//    }
-//    else{
-//        self.frame = frame;
-//    }
-//}
+
 - (void)loginBtnClick
 {
     [self endEditing:YES];
