@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "NextViewController.h"
 
 @interface HomeViewController ()
 
@@ -28,10 +29,10 @@
 }
 
 -(void)nextVC{
-    UIViewController * VC = [[UIViewController alloc]init];
+    NextViewController * VC = [[NextViewController alloc]init];
     [VC.navigationController.navigationBar setHidden:NO];
     
-    VC.title = @"New VC";
+  
     [VC.view setBackgroundColor:[UIColor whiteColor]];
     [self.navigationController pushViewController:VC animated:YES];
 }

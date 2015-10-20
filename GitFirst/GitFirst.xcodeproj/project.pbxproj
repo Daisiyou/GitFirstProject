@@ -36,6 +36,8 @@
 		B930CFBA1BA7FB600039E8BD /* InputFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = B930CFB91BA7FB600039E8BD /* InputFieldView.m */; };
 		B930CFBD1BA7FC130039E8BD /* MSDispersedAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = B930CFBC1BA7FC130039E8BD /* MSDispersedAlignment.m */; };
 		B930CFC11BA81F770039E8BD /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = B930CFC01BA81F770039E8BD /* UINavigationController+FDFullscreenPopGesture.m */; };
+		B978A2C51BD5E07900BA33F5 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B978A2C41BD5E07900BA33F5 /* NextViewController.m */; settings = {ASSET_TAGS = (); }; };
+		B978A2C81BD5EBEE00BA33F5 /* NextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B978A2C71BD5EBEE00BA33F5 /* NextCell.m */; settings = {ASSET_TAGS = (); }; };
 		B9C5D6AE1BA6BD2F00331171 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C5D6AD1BA6BD2F00331171 /* main.m */; };
 		B9C5D6B11BA6BD3000331171 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C5D6B01BA6BD3000331171 /* AppDelegate.m */; };
 		B9C5D6B71BA6BD3000331171 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9C5D6B51BA6BD3000331171 /* Main.storyboard */; };
@@ -156,6 +158,10 @@
 		B930CFBC1BA7FC130039E8BD /* MSDispersedAlignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDispersedAlignment.m; sourceTree = "<group>"; };
 		B930CFBF1BA81F770039E8BD /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		B930CFC01BA81F770039E8BD /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		B978A2C31BD5E07900BA33F5 /* NextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
+		B978A2C41BD5E07900BA33F5 /* NextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
+		B978A2C61BD5EBEE00BA33F5 /* NextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextCell.h; sourceTree = "<group>"; };
+		B978A2C71BD5EBEE00BA33F5 /* NextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextCell.m; sourceTree = "<group>"; };
 		B9C5D6A81BA6BD2F00331171 /* GitFirst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitFirst.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C5D6AC1BA6BD2F00331171 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9C5D6AD1BA6BD2F00331171 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -325,6 +331,8 @@
 			children = (
 				B930CF7E1BA7C4F80039E8BD /* HomeViewController.h */,
 				B930CF7F1BA7C4F80039E8BD /* HomeViewController.m */,
+				B978A2C31BD5E07900BA33F5 /* NextViewController.h */,
+				B978A2C41BD5E07900BA33F5 /* NextViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -339,6 +347,8 @@
 		B930CF751BA7C4AB0039E8BD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B978A2C61BD5EBEE00BA33F5 /* NextCell.h */,
+				B978A2C71BD5EBEE00BA33F5 /* NextCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -887,7 +897,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B978A2C51BD5E07900BA33F5 /* NextViewController.m in Sources */,
 				B9C5D7971BA6D05800331171 /* ControlFactory.m in Sources */,
+				B978A2C81BD5EBEE00BA33F5 /* NextCell.m in Sources */,
 				B930CFB71BA7F8800039E8BD /* UIWindow+Hierarchy.m in Sources */,
 				B930CF6E1BA7C1BC0039E8BD /* BaseTableHeaderView.m in Sources */,
 				B9C5D7731BA6D05800331171 /* UIButton+EnlargeEdge.m in Sources */,

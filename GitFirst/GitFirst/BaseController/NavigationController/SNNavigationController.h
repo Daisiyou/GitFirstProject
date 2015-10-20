@@ -25,6 +25,7 @@ typedef NS_ENUM(NSUInteger, UI7NavBarSytle)
 @property (nonatomic,assign)UI7NavBarSytle navBarStyle;
 
 - (void)setNavBarBgWithImage:(UIImage *)image;
+- (void)setNavBarBgWithImage:(UIImage *)image WithAlpha:(CGFloat)alpha;
 - (void)setNavBarBgWithColor:(UIColor *)cl;
 - (void)setNavBarBgWithColor:(UIColor *)cl animated:(BOOL)animated;
 - (void)setNavBarStyle:(UI7NavBarSytle)style;

@@ -7,10 +7,24 @@
 //
 
 #import "ProductsViewController.h"
+#import "SNNavigationController.h"
 
-@interface ProductsViewController ()
 
-@property(nonatomic, strong)NSMutableArray * arr;
+#define KNaviHeight self.navigationController.navigationBar.height
+
+@interface ProductsViewController ()<UIScrollViewDelegate>
+
+@property(nonatomic, weak)SNNavigationController * navi;
+
+@end
+
+@interface ProductsViewController()
+
+{
+    UIButton *leftBtn;
+    UIButton *rightBtn;
+    
+}
 
 @end
 
@@ -18,11 +32,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   // self.title = @"Product";
-    [self.view setBackgroundColor:[UIColor greenColor]];
+    self.navi = (SNNavigationController*)self.parentViewController;
+    self.navi.navigationBar.hidden = YES;
+    self.title = @"Product";
+    [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
+    self.tableView.top = 0;
     
-    [_arr addObject:@"nihao"];
+    leftBtn=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 40, 30)];
+    [leftBtn setTitle:@"left" forState:UIControlStateNormal];
+    [leftBtn setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+    [leftBtn addTarget:self action:@selector(leftBtnAction) forControlEvents:UIControlEventTouchUpInside];
     
+    UIBarButtonItem *leftItem=[[UIBarButtonItem alloc]initWithCustomView:leftBtn];
+    self.navigationItem.leftBarButtonItem=leftItem;
+    
+    rightBtn=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 40, 30)];
+    [rightBtn setTitle:@"right" forState:UIControlStateNormal];
+    [rightBtn setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+    [rightBtn addTarget:self action:@selector(rightBtnAction) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    UIBarButtonItem *rightItem=[[UIBarButtonItem alloc]initWithCustomView:rightBtn];
+    self.navigationItem.rightBarButtonItem=rightItem;
     
     // Do any additional setup after loading the view.
 }
@@ -31,6 +62,81 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)leftBtnAction
+{
+    NSLog(@"leftClick");
+}
+
+
+-(void)rightBtnAction
+{
+    NSLog(@"rightClick");
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 20;
+}
+
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UITableViewCell* cell = [UITableViewCell new];
+    cell.textLabel.text = @"nihao";
+    return cell;
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+  
+    self.navi.navigationBar.hidden = NO;
+    
+   // NSLog(@"%f",scrollView.contentOffset.y);
+    
+    CGFloat yOffset  = scrollView.contentOffset.y;
+    
+    if (yOffset < -KNaviHeight) {
+        
+    }
+    
+    if (yOffset <0) {
+        self.navi.navigationBar.hidden = YES;
+    }
+    
+    NSLog(@"%f",KNaviHeight);
+    
+    CGFloat alpha = (yOffset)/KNaviHeight;
+    if (alpha > 0.8) {
+        alpha = 0.8;
+    }
+    
+    NSLog(@"%f", alpha);
+    [self.navi setNavBarBgWithImage:[self imageWithColor:[UIColor orangeColor]] WithAlpha:alpha];
+}
+
+- (UIImage *)imageWithColor:(UIColor *)color
+{
+    // 描述矩形
+    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    
+    // 开启位图上下文
+    UIGraphicsBeginImageContext(rect.size);
+    // 获取位图上下文
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    // 使用color演示填充上下文
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    // 渲染上下文
+    CGContextFillRect(context, rect);
+    // 从上下文中获取图片
+    UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
+    // 结束上下文
+    UIGraphicsEndImageContext();
+    
+    return theImage;
+}
+
 
 /*
 #pragma mark - Navigation

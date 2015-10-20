@@ -34,6 +34,7 @@ NSString* const Appkey = @"cae3a8ae05154f3b28450794df0fe3e2";
     manager.shouldResignOnTouchOutside = YES;
     manager.shouldToolbarUsesTextFieldTintColor = YES;
     manager.enableAutoToolbar = NO;
+    //manager.keyboardDistanceFromTextField = 200;
     
     [Bugtags startWithAppKey:Appkey invocationEvent:(BTGInvocationEventBubble)];
     

@@ -134,6 +134,14 @@
     self.navColorOverly.image=image;
 }
 
+- (void)setNavBarBgWithImage:(UIImage *)image WithAlpha:(CGFloat)alpha
+{
+    _navBarStyle=UI7NavBarSytleImage;
+    self.navColorOverly.image=image;
+    self.navColorOverly.alpha = alpha;
+}
+
+
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
     if (self.viewControllers.count == 1) {
         return NO;

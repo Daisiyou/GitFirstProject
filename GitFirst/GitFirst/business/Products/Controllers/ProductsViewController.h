@@ -6,8 +6,9 @@
 //  Copyright (c) 2015年 Daisiyou. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "BaseTableViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface ProductsViewController : BaseViewController
+@interface ProductsViewController : BaseTableViewController
 
 @end
