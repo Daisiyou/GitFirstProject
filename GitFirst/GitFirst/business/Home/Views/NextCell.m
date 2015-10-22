@@ -8,11 +8,14 @@
 
 #import "NextCell.h"
 
+const int messageFont = 14;
 
 @interface NextCell()
 
 @property(nonatomic, strong)UILabel* message;
 @property(nonatomic, strong)UIButton* showMoreBtn;
+@property(nonatomic, strong)UILabel* calculateMessage;
+
 
 @end
 
@@ -27,7 +30,8 @@
     return self;
 }
 
--(void)initUI{
+-(void)initUI
+{
     
     [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.equalTo(self);
@@ -42,15 +46,32 @@
         make.right.equalTo(@(-10));
         make.bottom.equalTo(@(-10));
     }];
+    
+//    _showMoreBtn = [UIButton new];
+//    [_showMoreBtn setTitle:@"展开" forState:(UIControlStateNormal)];
+//    [self.contentView addSubview:_showMoreBtn];
+//    
+//    [_showMoreBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+//        
+//    }];
 }
 
 -(void)setData:(NSString*)data{
     
     _message.text = data;
+    _calculateMessage = [ControlFactory createLabel:data backgroundColor:[UIColor clearColor] font:[UIFont systemFontOfSize:14] textColor:[UIColor blackColor] textAlignment:(NSTextAlignmentCenter) lineBreakMode:(NSLineBreakByTruncatingTail)];
+    _calculateMessage.width = self.contentView.width - 20;
+    _calculateMessage.height = 999;
+    NSLog(@"%d", _calculateMessage.numberOfLines);
 }
 
 -(void)changeLines{
-    _message.numberOfLines = 0;
+    
+    if (_message.numberOfLines == 0) {
+        _message.numberOfLines =3;
+    }else{
+        _message.numberOfLines = 0;
+    }
 }
 
 
