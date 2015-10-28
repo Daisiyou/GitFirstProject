@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseScrollView.h"
 
 typedef enum
 {
@@ -21,6 +22,8 @@ typedef enum
 }MSViewControllerType;
 
 @interface BaseViewController : UIViewController
+
+@property (nonatomic, retain) BaseScrollView *contentView;
 
 //ViewContoller类型
 @property(nonatomic, readwrite)MSViewControllerType type;

@@ -38,7 +38,7 @@ const int messageFont = 14;
         make.width.mas_equalTo(MS_SCREEN_WIDTH);
     }];
     
-    _message = [ControlFactory createLabel:@"123" backgroundColor:[UIColor clearColor] font:[UIFont systemFontOfSize:14] textColor:[UIColor blackColor] textAlignment:(NSTextAlignmentCenter) lineBreakMode:(NSLineBreakByTruncatingTail)];
+    _message = [ControlFactory createLabel:@"123" backgroundColor:[UIColor clearColor] font:[UIFont systemFontOfSize:messageFont] textColor:[UIColor blackColor] textAlignment:(NSTextAlignmentCenter) lineBreakMode:(NSLineBreakByTruncatingTail)];
     [self.contentView addSubview:_message];
     _message.numberOfLines = 3;
     [_message mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -59,10 +59,18 @@ const int messageFont = 14;
 -(void)setData:(NSString*)data{
     
     _message.text = data;
-    _calculateMessage = [ControlFactory createLabel:data backgroundColor:[UIColor clearColor] font:[UIFont systemFontOfSize:14] textColor:[UIColor blackColor] textAlignment:(NSTextAlignmentCenter) lineBreakMode:(NSLineBreakByTruncatingTail)];
-    _calculateMessage.width = self.contentView.width - 20;
-    _calculateMessage.height = 999;
-    NSLog(@"%d", _calculateMessage.numberOfLines);
+//    _calculateMessage = [ControlFactory createLabel:data backgroundColor:[UIColor clearColor] font:[UIFont systemFontOfSize:messageFont] textColor:[UIColor redColor] textAlignment:(NSTextAlignmentCenter) lineBreakMode:(NSLineBreakByTruncatingTail)];
+//    _calculateMessage.numberOfLines = 0;
+//    _calculateMessage.width = self.contentView.width - 20;
+//    _calculateMessage.height = 100;
+//    _calculateMessage.left = 0;
+//    _calculateMessage.top = 0;
+//    [self.contentView addSubview:_calculateMessage];
+//    
+//    
+//    
+//    
+//    NSLog(@"%f", _calculateMessage.height);
 }
 
 -(void)changeLines{

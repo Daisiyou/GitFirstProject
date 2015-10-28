@@ -33,7 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navi = (SNNavigationController*)self.parentViewController;
-    self.navi.navigationBar.hidden = YES;
+    [self.navi setNavBarBgWithImage:[self imageWithColor:[UIColor orangeColor]] WithAlpha:0];
     self.title = @"Product";
     [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
     self.tableView.top = 0;
@@ -55,7 +55,18 @@
     UIBarButtonItem *rightItem=[[UIBarButtonItem alloc]initWithCustomView:rightBtn];
     self.navigationItem.rightBarButtonItem=rightItem;
     
+    __weak typeof(self) weakSelf = self;
+    
+    [self.tableView addLegendHeaderWithRefreshingBlock:^{
+        [weakSelf refresh];
+    }];
+    
     // Do any additional setup after loading the view.
+}
+
+-(void)refresh{
+    [self.tableView.header endRefreshing];
+
 }
 
 - (void)didReceiveMemoryWarning {

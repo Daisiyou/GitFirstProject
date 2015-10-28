@@ -28,15 +28,17 @@ NSString* const Appkey = @"cae3a8ae05154f3b28450794df0fe3e2";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+//    
     IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
     manager.enable = YES; 
     manager.shouldResignOnTouchOutside = NO;
     manager.shouldToolbarUsesTextFieldTintColor = YES;
     manager.enableAutoToolbar = NO;
-    //manager.keyboardDistanceFromTextField = 200;
+    manager.keyboardDistanceFromTextField = 100;
+    manager.enable =NO;
     
-    [Bugtags startWithAppKey:Appkey invocationEvent:(BTGInvocationEventBubble)];
+    
+    //[Bugtags startWithAppKey:Appkey invocationEvent:(BTGInvocationEventBubble)];
     
     [self initControllers];
     return YES;
