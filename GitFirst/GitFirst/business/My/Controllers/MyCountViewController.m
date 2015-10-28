@@ -21,6 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor yellowColor]];
+    [self.view addSubview:self.contentView];
+    
+    [self registNotificationAndKVO];
     // Do any additional setup after loading the view.
     
 //    if (![[[NSUserDefaults standardUserDefaults] objectForKey:@"login"] boolValue]) {
@@ -42,9 +45,24 @@
 //        [_Register showFromRight];
 //    }
     
-    DSYRegisterView * login = [[DSYRegisterView alloc]initWithFrame:self.view.frame];
-    [self.view addSubview:login];
+    DSYRegisterView * login = [[DSYRegisterView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 400)];
+    [self.contentView addSubview:login];
 }
+
+
+-(void)registNotificationAndKVO{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(_keyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(_keyboardWillHide)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -125,6 +125,7 @@
 		B9CB86FF1BD8C83C007A53B5 /* h3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9CB86F91BD8C83C007A53B5 /* h3.jpg */; settings = {ASSET_TAGS = (); }; };
 		B9CB87001BD8C83C007A53B5 /* h4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9CB86FA1BD8C83C007A53B5 /* h4.jpg */; settings = {ASSET_TAGS = (); }; };
 		B9CB87011BD8C83C007A53B5 /* placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9CB86FB1BD8C83C007A53B5 /* placeholder@2x.png */; settings = {ASSET_TAGS = (); }; };
+		B9E4D2151BE0C61400140D48 /* CycleScrollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E4D2141BE0C61400140D48 /* CycleScrollCell.m */; settings = {ASSET_TAGS = (); }; };
 		B9EE35E21BDF5C59002796D3 /* UIWindow+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EE35E11BDF5C59002796D3 /* UIWindow+Additions.m */; settings = {ASSET_TAGS = (); }; };
 		B9EE35E51BDF5DAF002796D3 /* BaseScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EE35E41BDF5DAF002796D3 /* BaseScrollView.m */; settings = {ASSET_TAGS = (); }; };
 		B9F8D95D1BDF50B500A8A151 /* DSYInputTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F8D95C1BDF50B500A8A151 /* DSYInputTextField.m */; settings = {ASSET_TAGS = (); }; };
@@ -331,6 +332,8 @@
 		B9CB86FA1BD8C83C007A53B5 /* h4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = h4.jpg; sourceTree = "<group>"; };
 		B9CB86FB1BD8C83C007A53B5 /* placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder@2x.png"; sourceTree = "<group>"; };
 		B9D86F401BA7BB55002757E4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B9E4D2131BE0C61400140D48 /* CycleScrollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleScrollCell.h; sourceTree = "<group>"; };
+		B9E4D2141BE0C61400140D48 /* CycleScrollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleScrollCell.m; sourceTree = "<group>"; };
 		B9EE35E01BDF5C59002796D3 /* UIWindow+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Additions.h"; sourceTree = "<group>"; };
 		B9EE35E11BDF5C59002796D3 /* UIWindow+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Additions.m"; sourceTree = "<group>"; };
 		B9EE35E31BDF5DAF002796D3 /* BaseScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseScrollView.h; sourceTree = "<group>"; };
@@ -515,6 +518,8 @@
 		B930CF7D1BA7C4AB0039E8BD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B9E4D2131BE0C61400140D48 /* CycleScrollCell.h */,
+				B9E4D2141BE0C61400140D48 /* CycleScrollCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1142,6 +1147,7 @@
 				B9EE35E51BDF5DAF002796D3 /* BaseScrollView.m in Sources */,
 				B9C5D6AE1BA6BD2F00331171 /* main.m in Sources */,
 				B9C5D7661BA6D05800331171 /* BaseViewController.m in Sources */,
+				B9E4D2151BE0C61400140D48 /* CycleScrollCell.m in Sources */,
 				B930CF831BA7C5100039E8BD /* MyCountViewController.m in Sources */,
 				B9C5D7791BA6D05800331171 /* Config.m in Sources */,
 				B9C5D76D1BA6D05800331171 /* TabBarViewController.m in Sources */,

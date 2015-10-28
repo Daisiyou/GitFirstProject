@@ -30,7 +30,7 @@
 
 -(void)initUI{
     
-    _loginName = [[DSYInputTextField alloc]initWithFrameTitleAndPlaceHoderText:CGRectMake(50, 400, self.width-100, 44) title:@"用户名" placeHoderText:@"请输入name"];
+    _loginName = [[DSYInputTextField alloc]initWithFrameTitleAndPlaceHoderText:CGRectMake(50, 200, self.width-100, 44) title:@"用户名" placeHoderText:@"请输入name"];
     _password = [[DSYInputTextField alloc]initWithFrameTitleAndPlaceHoderText:CGRectMake(50, _loginName.bottom, _loginName.width, _loginName.height) title:@"密码" placeHoderText:@"请输入密码"];
     
     [_password dispersedAlignmentTitleLabelByAccordingToLabel:[ControlFactory createLabel:@"用户名" backgroundColor:[UIColor clearColor] font:_password.titleLabel.font textColor:[UIColor blackColor] textAlignment:(NSTextAlignmentCenter) lineBreakMode:(NSLineBreakByWordWrapping)]];

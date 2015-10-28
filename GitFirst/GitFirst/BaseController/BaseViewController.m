@@ -39,6 +39,8 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = MS_DEFAULT_BACKGROUND_COLOR;
     
+    _autoScroll = YES;
+
     _contentView = [[BaseScrollView alloc] initWithFrame:CGRectMake(0, MS_NAVBAR_HEIGHT_WITH_STATUS_BAR, MS_SCREEN_WIDTH, MS_SCREEN_HEIGHT - MS_NAVBAR_HEIGHT_WITH_STATUS_BAR - MS_TABBAR_HEIGHT)];
     _contentView.backgroundColor = MS_DEFAULT_BACKGROUND_COLOR;
 }

@@ -8,7 +8,7 @@
 
 #import "ProductsViewController.h"
 #import "SNNavigationController.h"
-
+#import "CycleScrollCell.h"
 
 #define KNaviHeight self.navigationController.navigationBar.height
 
@@ -37,6 +37,9 @@
     self.title = @"Product";
     [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
     self.tableView.top = 0;
+    self.tableView.height = self.tableView.height + MS_NAVBAR_HEIGHT_WITH_STATUS_BAR;
+    self.tableView.estimatedRowHeight = 100;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
     
     leftBtn=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 40, 30)];
     [leftBtn setTitle:@"left" forState:UIControlStateNormal];
@@ -86,18 +89,31 @@
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+    return 2;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 20;
+    if (section == 0) {
+        return 1;
+    }else {
+        return 20;
+    }
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UITableViewCell* cell = [UITableViewCell new];
-    cell.textLabel.text = @"nihao";
-    return cell;
+    
+    if (indexPath.section == 0) {
+        CycleScrollCell * cell = [CycleScrollCell new];
+        return cell;
+        
+    }else{
+        UITableViewCell* cell = [UITableViewCell new];
+        cell.textLabel.text = @"nihao";
+        return cell;
+    }
+    
+    return 0;
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
