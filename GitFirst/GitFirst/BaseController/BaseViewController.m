@@ -46,6 +46,8 @@
     
     
     [self setNaviBarLeftItem];
+    [self initNavButtons];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,7 +57,6 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self initNavButtons];
 }
 
 - (void)setNaviBarLeftItem

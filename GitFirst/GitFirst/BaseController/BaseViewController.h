@@ -38,4 +38,6 @@ typedef enum
 //子类实现，初始化导航栏按钮
 -(void)initNavButtons;
 
+-(void)backAction;
+
 @end
