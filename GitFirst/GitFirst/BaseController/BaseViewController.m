@@ -43,6 +43,9 @@
 
     _contentView = [[BaseScrollView alloc] initWithFrame:CGRectMake(0, MS_NAVBAR_HEIGHT_WITH_STATUS_BAR, MS_SCREEN_WIDTH, MS_SCREEN_HEIGHT - MS_NAVBAR_HEIGHT_WITH_STATUS_BAR - MS_TABBAR_HEIGHT)];
     _contentView.backgroundColor = MS_DEFAULT_BACKGROUND_COLOR;
+    
+    
+    [self setNaviBarLeftItem];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,7 +58,20 @@
     [self initNavButtons];
 }
 
+- (void)setNaviBarLeftItem
+{
+    self.NaviBarLeftItem = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.NaviBarLeftItem.frame = CGRectMake(0, 0, 22, 22);
+    UIImage *backImage = [UIImage imageNamed:@"return"];
+    [self.NaviBarLeftItem setBackgroundImage:backImage forState:UIControlStateNormal];
+    [self.NaviBarLeftItem addTarget:self action:@selector(backAction) forControlEvents:(UIControlEventTouchUpInside)];
 
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.NaviBarLeftItem];
+}
+
+-(void)backAction{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 - (void)dealloc
 {

@@ -29,6 +29,7 @@
         }
     }
     self.contentSize = CGSizeMake(self.frame.size.width, contentRect.size.height + contentRect.origin.y);
+    NSLog(@"%f,%f",self.contentSize.width,self.contentSize.height);
 }
 
 

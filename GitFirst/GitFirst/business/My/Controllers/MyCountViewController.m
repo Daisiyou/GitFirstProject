@@ -24,6 +24,7 @@
     [self.view addSubview:self.contentView];
     
     [self registNotificationAndKVO];
+    [self.NaviBarLeftItem setHidden:YES];
     // Do any additional setup after loading the view.
     
 //    if (![[[NSUserDefaults standardUserDefaults] objectForKey:@"login"] boolValue]) {
@@ -45,7 +46,7 @@
 //        [_Register showFromRight];
 //    }
     
-    DSYRegisterView * login = [[DSYRegisterView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 400)];
+    DSYRegisterView * login = [[DSYRegisterView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 800)];
     [self.contentView addSubview:login];
 }
 

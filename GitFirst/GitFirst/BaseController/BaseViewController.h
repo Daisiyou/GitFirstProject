@@ -28,6 +28,8 @@ typedef enum
 //ViewContoller类型
 @property(nonatomic, readwrite)MSViewControllerType type;
 
+@property(nonatomic, strong) UIButton* NaviBarLeftItem;
+
 //子类在此函数注册通知和KVO，注意，重载后需要子类初始化Model等对象后重新调用
 -(void)registNotificationAndKVO;
 //子类再此函数移除通知和KVO
