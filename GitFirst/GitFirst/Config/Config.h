@@ -106,6 +106,11 @@
 #define MS_DEFAULT_TOP_MARGIN 15
 #define MS_DEFAULT_BOTTOM_MARGIN 15
 
+#define KSpaceTop       10
+#define KSpaceBottom    10
+#define KSpaceRight     10
+#define KSpaceLeft      10
+
 #pragma mark -Cache and Downloads
 #define CACHE_ROOT_FOLDER @"com.hackemist.SDWebImageCache.default"
 #define CACHE_RESOURCE_FOLDER @"resource"
