@@ -130,6 +130,9 @@
 		B9CB87011BD8C83C007A53B5 /* placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9CB86FB1BD8C83C007A53B5 /* placeholder@2x.png */; settings = {ASSET_TAGS = (); }; };
 		B9EE35E21BDF5C59002796D3 /* UIWindow+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EE35E11BDF5C59002796D3 /* UIWindow+Additions.m */; settings = {ASSET_TAGS = (); }; };
 		B9EE35E51BDF5DAF002796D3 /* BaseScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EE35E41BDF5DAF002796D3 /* BaseScrollView.m */; settings = {ASSET_TAGS = (); }; };
+		B9F49D9A1BE9A2EE00BD9239 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F49D991BE9A2EE00BD9239 /* ImageViewController.m */; settings = {ASSET_TAGS = (); }; };
+		B9F49D9F1BE9AD7B00BD9239 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F49D9E1BE9AD7B00BD9239 /* CollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		B9F49DA21BE9DED600BD9239 /* CollectionHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F49DA11BE9DED600BD9239 /* CollectionHeaderCell.m */; settings = {ASSET_TAGS = (); }; };
 		B9F8D95D1BDF50B500A8A151 /* DSYInputTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F8D95C1BDF50B500A8A151 /* DSYInputTextField.m */; settings = {ASSET_TAGS = (); }; };
 		B9F8D9601BDF518D00A8A151 /* DSYRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F8D95F1BDF518D00A8A151 /* DSYRegisterView.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -344,6 +347,12 @@
 		B9EE35E11BDF5C59002796D3 /* UIWindow+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Additions.m"; sourceTree = "<group>"; };
 		B9EE35E31BDF5DAF002796D3 /* BaseScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseScrollView.h; sourceTree = "<group>"; };
 		B9EE35E41BDF5DAF002796D3 /* BaseScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseScrollView.m; sourceTree = "<group>"; };
+		B9F49D981BE9A2EE00BD9239 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		B9F49D991BE9A2EE00BD9239 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		B9F49D9D1BE9AD7B00BD9239 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		B9F49D9E1BE9AD7B00BD9239 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		B9F49DA01BE9DED600BD9239 /* CollectionHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionHeaderCell.h; sourceTree = "<group>"; };
+		B9F49DA11BE9DED600BD9239 /* CollectionHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionHeaderCell.m; sourceTree = "<group>"; };
 		B9F8D95B1BDF50B500A8A151 /* DSYInputTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSYInputTextField.h; sourceTree = "<group>"; };
 		B9F8D95C1BDF50B500A8A151 /* DSYInputTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSYInputTextField.m; sourceTree = "<group>"; };
 		B9F8D95E1BDF518D00A8A151 /* DSYRegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSYRegisterView.h; sourceTree = "<group>"; };
@@ -433,6 +442,10 @@
 				B930CF7F1BA7C4F80039E8BD /* HomeViewController.m */,
 				B978A2C31BD5E07900BA33F5 /* NextViewController.h */,
 				B978A2C41BD5E07900BA33F5 /* NextViewController.m */,
+				B9F49D981BE9A2EE00BD9239 /* ImageViewController.h */,
+				B9F49D991BE9A2EE00BD9239 /* ImageViewController.m */,
+				B9F49D9D1BE9AD7B00BD9239 /* CollectionViewController.h */,
+				B9F49D9E1BE9AD7B00BD9239 /* CollectionViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -455,6 +468,8 @@
 				B92E6D2B1BE31A3E00EF38DE /* HomePageItemButton.m */,
 				B92E6D2D1BE3501D00EF38DE /* CycleScrollCell.h */,
 				B92E6D2E1BE3501D00EF38DE /* CycleScrollCell.m */,
+				B9F49DA01BE9DED600BD9239 /* CollectionHeaderCell.h */,
+				B9F49DA11BE9DED600BD9239 /* CollectionHeaderCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1126,6 +1141,7 @@
 				B9EE35E21BDF5C59002796D3 /* UIWindow+Additions.m in Sources */,
 				B930CF6E1BA7C1BC0039E8BD /* BaseTableHeaderView.m in Sources */,
 				B9C5D7731BA6D05800331171 /* UIButton+EnlargeEdge.m in Sources */,
+				B9F49D9F1BE9AD7B00BD9239 /* CollectionViewController.m in Sources */,
 				B9C5D7951BA6D05800331171 /* HttpNetworkManager.m in Sources */,
 				B9C5D7691BA6D05800331171 /* SlideNavigationController.m in Sources */,
 				B930CFB31BA7F8800039E8BD /* IQToolbar.m in Sources */,
@@ -1176,8 +1192,10 @@
 				B9CB86F41BD8C74A007A53B5 /* UIView+SDExtension.m in Sources */,
 				B930CFB61BA7F8800039E8BD /* UIView+IQKeyboardToolbar.m in Sources */,
 				B9C5D76B1BA6D05800331171 /* SNNavigationController.m in Sources */,
+				B9F49DA21BE9DED600BD9239 /* CollectionHeaderCell.m in Sources */,
 				B930CFBD1BA7FC130039E8BD /* MSDispersedAlignment.m in Sources */,
 				B930CFBA1BA7FB600039E8BD /* InputFieldView.m in Sources */,
+				B9F49D9A1BE9A2EE00BD9239 /* ImageViewController.m in Sources */,
 				B9C5D76F1BA6D05800331171 /* BaseModel.m in Sources */,
 				B9F8D95D1BDF50B500A8A151 /* DSYInputTextField.m in Sources */,
 				B9CB86F21BD8C74A007A53B5 /* SDCollectionViewCell.m in Sources */,

@@ -8,8 +8,10 @@
 
 #import "HomeViewController.h"
 #import "SNNavigationController.h"
+#import "ImageViewController.h"
 #import "HomePageScrollCell.h"
 #import "CycleScrollCell.h"
+#import "CollectionViewController.h"
 
 @interface HomeViewController ()<HomePageScrollCellDelegate>
 
@@ -45,7 +47,8 @@
 
 -(void)backAction
 {
-    NSLog(@"类别");
+    CollectionViewController *VC = [[CollectionViewController alloc]init];
+    [self.navigationController pushViewController:VC animated:YES];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

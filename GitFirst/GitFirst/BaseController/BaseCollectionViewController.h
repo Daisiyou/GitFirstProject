@@ -11,5 +11,6 @@
 @interface BaseCollectionViewController : RefreshViewController<UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property(nonatomic, retain)UICollectionView* collectionView;
+@property(nonatomic, strong)UICollectionViewFlowLayout* layout;
 
 @end
