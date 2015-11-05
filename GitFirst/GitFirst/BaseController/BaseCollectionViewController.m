@@ -30,7 +30,11 @@
 //}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
+    [self initCollectionView];
+}
+
+-(void)initCollectionView{
     self.layout = [[UICollectionViewFlowLayout alloc]init];
     self.layout.minimumLineSpacing = 50;
     self.layout.minimumInteritemSpacing = 100;
@@ -38,13 +42,6 @@
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, MS_NAVBAR_HEIGHT_WITH_STATUS_BAR, MS_SCREEN_WIDTH, self.view.height - MS_NAVBAR_HEIGHT_WITH_STATUS_BAR - MS_TABBAR_HEIGHT) collectionViewLayout:self.layout];
     self.collectionView.dataSource = self;
     self.collectionView.delegate =self;
-    
-    //注册cell，
-//        [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"collectionViewCell"];
-//    //
-//        [self.collectionView registerClass:[headerClass class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"collectionViewHeader"];
-    //    [self.collectionView registerClass:[footerClass class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"collectionViewFooter"];
-    
     [self.collectionView setBackgroundColor:MS_DEFAULT_BACKGROUND_COLOR];
     [self.collectionView setUserInteractionEnabled:YES];
     self.collectionView.alwaysBounceVertical = YES;

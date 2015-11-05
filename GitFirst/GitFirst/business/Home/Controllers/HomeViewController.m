@@ -81,7 +81,7 @@
 
 -(void)beClickedAtSection:(NSInteger)section andRow:(NSInteger)row{
 
-    NSLog(@"%d, %d", section, row);
+    NSLog(@"%ld, %d", (long)section, row);
 }
 /*
 #pragma mark - Navigation

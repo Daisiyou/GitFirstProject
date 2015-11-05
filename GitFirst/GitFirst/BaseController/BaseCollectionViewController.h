@@ -13,4 +13,6 @@
 @property(nonatomic, retain)UICollectionView* collectionView;
 @property(nonatomic, strong)UICollectionViewFlowLayout* layout;
 
+-(void)initCollectionView;
+
 @end
