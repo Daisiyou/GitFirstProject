@@ -12,4 +12,6 @@
 //移动tabbar（1-3）
 -(void)moveToTabbarIndex:(NSInteger)index;
 
+-(instancetype)initWithTitleArr:(NSArray*)titleArr AndNormalImages:(NSArray*)normalImages AndSelectedImages:(NSArray*)selectedImages;
+
 @end

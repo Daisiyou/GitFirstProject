@@ -34,7 +34,8 @@
     [self.contentView addSubview:scrollView];
     [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.bottom.equalTo(self.contentView);
-        make.size.mas_equalTo(CGSizeMake(MS_SCREEN_WIDTH, 100));
+        //make.size.mas_equalTo(CGSizeMake(MS_SCREEN_WIDTH, 100));
+        make.height.equalTo(@100);
     }];
     HomePageItemButton * previousButton = nil;
     

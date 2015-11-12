@@ -28,9 +28,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    self.tableView.top = MS_NAVBAR_HEIGHT_WITH_STATUS_BAR;
-    self.tableView.height = self.view.height - MS_NAVBAR_HEIGHT_WITH_STATUS_BAR - MS_TABBAR_HEIGHT;
+    [self.view addSubview:self.tableView];
+    
+    self.tableViewConstraints = [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.equalTo(self.view);
+        make.width.equalTo(self.view);
+        make.height.equalTo(self.view);
+    }];
+
     self.tableView.backgroundColor = MS_DEFAULT_BACKGROUND_COLOR;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -39,7 +46,36 @@
     self.tableView.backgroundView = nil;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.separatorColor=[UIColor clearColor];
-    [self.view addSubview:self.tableView];
+   
+}
+
+-(void)viewWillLayoutSubviews
+{
+    if (self.tableViewConstraints)
+    {
+        for (MASConstraint *masconstraint in self.tableViewConstraints)
+        {
+            [masconstraint uninstall];
+        }
+    }
+    
+    if ([UIApplication sharedApplication].statusBarOrientation == UIDeviceOrientationPortrait || [UIApplication sharedApplication].statusBarOrientation == UIDeviceOrientationPortraitUpsideDown)
+    {
+        self.tableViewConstraints = [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(64);
+            make.left.equalTo(self.view);
+            make.width.equalTo(self.view);
+            make.height.mas_equalTo(self.view.height - MS_NAVBAR_HEIGHT_WITH_STATUS_BAR - MS_TABBAR_HEIGHT);
+        }];    }
+    else
+    {
+        self.tableViewConstraints = [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(30);
+            make.left.equalTo(self.view);
+            make.width.equalTo(self.view);
+            make.height.mas_equalTo(self.view.height - 30 - MS_TABBAR_HEIGHT);
+        }];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

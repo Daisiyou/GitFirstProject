@@ -28,9 +28,8 @@
 -(void)initUI{
     
     [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.equalTo(self);
         make.height.equalTo(@200);
-        make.width.mas_equalTo(MS_SCREEN_WIDTH);
+        make.width.mas_equalTo(self);
     }];
     
     NSArray *images = @[[UIImage imageNamed:@"h1.jpg"],
@@ -45,7 +44,7 @@
     cycleScrollView.localizationImagesGroup = images;
     [cycleScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.equalTo(self.contentView);
-        make.height.equalTo(@200);
+        make.height.equalTo(self.contentView);
         make.width.equalTo(self.contentView);
     }];
     

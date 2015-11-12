@@ -12,4 +12,6 @@
 
 @property(nonatomic, retain)UITableView* tableView;
 
+@property(nonatomic, strong)NSArray* tableViewConstraints;
+
 @end

@@ -21,9 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor yellowColor]];
-    [self.view addSubview:self.contentView];
-    
-    [self registNotificationAndKVO];
+//    [self.view addSubview:self.contentView];
+//    
+//    [self registNotificationAndKVO];
     [self.NaviBarLeftItem setHidden:YES];
     // Do any additional setup after loading the view.
     
@@ -47,22 +47,22 @@
 //    }
     
     DSYRegisterView * login = [[DSYRegisterView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 800)];
-    [self.contentView addSubview:login];
+    [self.view addSubview:login];
 }
 
 
--(void)registNotificationAndKVO{
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(_keyboardWillShow:)
-                                                 name:UIKeyboardWillShowNotification
-                                               object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(_keyboardWillHide)
-                                                 name:UIKeyboardWillHideNotification
-                                               object:nil];
-
-}
+//-(void)registNotificationAndKVO{
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//                                             selector:@selector(_keyboardWillShow:)
+//                                                 name:UIKeyboardWillShowNotification
+//                                               object:nil];
+//    
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//                                             selector:@selector(_keyboardWillHide)
+//                                                 name:UIKeyboardWillHideNotification
+//                                               object:nil];
+//
+//}
 
 
 - (void)didReceiveMemoryWarning {

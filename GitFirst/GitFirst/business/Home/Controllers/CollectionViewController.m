@@ -133,12 +133,6 @@
     NSString* source = _titleArr[sourceIndexPath.row];
     [_titleArr removeObject:source];
     [_titleArr insertObject:source atIndex:destinationIndexPath.row];
-    
-//    [self.collectionView removeFromSuperview];
-//    [self initCollectionView];
-//    [self settingColloctionView];
-//    
-//    [self.collectionView reloadData];
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{

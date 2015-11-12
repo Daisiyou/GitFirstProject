@@ -176,8 +176,11 @@
 
 - (NSUInteger)supportedInterfaceOrientations{
     
-    return UIInterfaceOrientationMaskPortrait;
+    return UIInterfaceOrientationMaskAll;
 }
+
+// Notifies when rotation begins, reaches halfway point and ends.
+
 
 @end
 @implementation UINavigationBar (CustomImage)

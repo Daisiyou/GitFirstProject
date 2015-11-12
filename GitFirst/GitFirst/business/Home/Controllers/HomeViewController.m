@@ -12,6 +12,7 @@
 #import "HomePageScrollCell.h"
 #import "CycleScrollCell.h"
 #import "CollectionViewController.h"
+#import "QRCodeController.h"
 
 @interface HomeViewController ()<HomePageScrollCellDelegate>
 
@@ -22,11 +23,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.tableView.estimatedRowHeight = 100;
+    self.tableView.estimatedRowHeight = 200;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
 
     [self.tableView registerClass:[HomePageScrollCell class] forCellReuseIdentifier:@"cell"];
-
 }
 
 -(void)initNavButtons
@@ -40,8 +40,16 @@
     [button setTitle:@"类别" forState:(UIControlStateNormal)];
     [button setTitleColor:[UIColor blueColor] forState:(UIControlStateNormal)];
     [button addTarget:self action:@selector(backAction) forControlEvents:(UIControlEventTouchUpInside)];
-    
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+    
+    UIButton *rightBtn = [UIButton new];
+    [rightBtn setTitle:@"扫码" forState:(UIControlStateNormal)];
+    [rightBtn setTitleColor:[UIColor blueColor] forState:(UIControlStateNormal)];
+    [rightBtn.titleLabel setFont:[UIFont systemFontOfSize:14.0]];
+    [rightBtn sizeToFit];
+    [rightBtn addTarget:self action:@selector(rightBtnAction) forControlEvents:(UIControlEventTouchUpInside)];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
 
 }
 
@@ -49,6 +57,12 @@
 {
     CollectionViewController *VC = [[CollectionViewController alloc]init];
     [self.navigationController pushViewController:VC animated:YES];
+}
+
+-(void)rightBtnAction{
+    QRCodeController * QRVC = [[QRCodeController alloc]init];
+    
+    [self.navigationController pushViewController:QRVC animated:YES];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -83,6 +97,24 @@
 
     NSLog(@"%ld, %d", (long)section, row);
 }
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    NSLog(@"begin");
+
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    NSLog(@"end");
+
+}
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    NSLog(@"half");
+}
+
+
 /*
 #pragma mark - Navigation
 

@@ -11,6 +11,8 @@
 
 @interface TabBarViewController ()
 
+@property(nonatomic, strong)AnimateTabbarView* tabbar;
+
 @end
 
 @implementation TabBarViewController
@@ -26,9 +28,16 @@
 
 -(void)initTabBar
 {
-    AnimateTabbarView * tabBar = [[AnimateTabbarView alloc]initWithFrame:self.tabBar.frame];
+    self.tabbar = [[AnimateTabbarView alloc]initWithTitleArr:@[@"Home",@"Product",@"My"] AndNormalImages:@[@"tb_account1",@"tb_search1",@"tb_service1"] AndSelectedImages:@[@"tb_account2",@"tb_search2",@"tb_service2"]];;
     [self.tabBar removeAllSubviews];
-    [self.tabBar addSubview:tabBar];
+
+    self.tabbar.frame = CGRectMake(0, 0, self.tabBar.width, self.tabBar.height);
+    [self.tabBar addSubview:self.tabbar];
+}
+
+-(void)viewWillLayoutSubviews
+{
+    self.tabbar.frame = CGRectMake(0, 0, self.tabBar.width, self.tabBar.height);
 }
 
 - (void)viewDidLoad {
@@ -42,12 +51,12 @@
 
 #pragma 横竖屏
 -(NSUInteger)supportedInterfaceOrientations{
-    return UIInterfaceOrientationMaskPortrait;
+    return UIInterfaceOrientationMaskAll;
 }
 
 - (BOOL)shouldAutorotate
 {
-    return NO;
+    return YES;
 }
 
 @end

@@ -19,7 +19,7 @@
 
 NSString* const Appkey = @"cae3a8ae05154f3b28450794df0fe3e2";
 
-@interface AppDelegate ()
+@interface AppDelegate ()<UIAppearance>
 
 @end
 
@@ -33,11 +33,13 @@ NSString* const Appkey = @"cae3a8ae05154f3b28450794df0fe3e2";
 //    manager.enable = YES; 
 //    manager.shouldResignOnTouchOutside = NO;
 //    manager.shouldToolbarUsesTextFieldTintColor = YES;
-//    manager.enableAutoToolbar = NO;
-//    manager.keyboardDistanceFromTextField = 100;
+//    manager.enableAutoToolbar = YES;
+//    manager.keyboardDistanceFromTextField = 10;
 //    manager.enable =NO;
-    
-    
+   // [[UIButton appearance] setBackgroundColor:[UIColor orangeColor] forState:(UIControlStateNormal)];
+
+    //[[UIButton appearanceWhenContainedInInstancesOfClasses:@[[UINavigationBar class]]] setBackgroundColor:[UIColor orangeColor] forState:(UIControlStateNormal)];
+   // [[UIButton appearanceForTraitCollection:[UITraitCollection traitCollectionWithHorizontalSizeClass:(UIUserInterfaceSizeClassUnspecified)] whenContainedInInstancesOfClasses:@[[UINavigationBar class]]] setBackgroundColor:[UIColor orangeColor] forState:(UIControlStateNormal)];
     //[Bugtags startWithAppKey:Appkey invocationEvent:(BTGInvocationEventBubble)];
     
     [self initControllers];
