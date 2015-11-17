@@ -41,6 +41,21 @@
     self.tableView.estimatedRowHeight = 100;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     
+    if (self.tableViewConstraints)
+    {
+        for (MASConstraint *masconstraint in self.tableViewConstraints)
+        {
+            [masconstraint uninstall];
+        }
+        
+        self.tableViewConstraints = [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(0);
+            make.left.equalTo(self.view);
+            make.width.equalTo(self.view);
+            make.height.mas_equalTo(self.view.height - MS_TABBAR_HEIGHT);
+        }];
+    }
+    
     leftBtn=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 40, 30)];
     [leftBtn setTitle:@"left" forState:UIControlStateNormal];
     [leftBtn setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
@@ -65,6 +80,12 @@
     }];
     
     // Do any additional setup after loading the view.
+}
+
+
+-(void)viewWillLayoutSubviews
+{
+ 
 }
 
 -(void)refresh{

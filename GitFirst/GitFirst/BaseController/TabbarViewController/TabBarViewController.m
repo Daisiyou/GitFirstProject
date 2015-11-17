@@ -28,7 +28,7 @@
 
 -(void)initTabBar
 {
-    self.tabbar = [[AnimateTabbarView alloc]initWithTitleArr:@[@"Home",@"Product",@"My"] AndNormalImages:@[@"tb_account1",@"tb_search1",@"tb_service1"] AndSelectedImages:@[@"tb_account2",@"tb_search2",@"tb_service2"]];;
+    self.tabbar = [[AnimateTabbarView alloc]initWithTitleArr:@[@"主页",@"产品",@"我的"] AndNormalImages:@[@"tb_account1",@"tb_search1",@"tb_service1"] AndSelectedImages:@[@"tb_account2",@"tb_search2",@"tb_service2"]];
     [self.tabBar removeAllSubviews];
 
     self.tabbar.frame = CGRectMake(0, 0, self.tabBar.width, self.tabBar.height);

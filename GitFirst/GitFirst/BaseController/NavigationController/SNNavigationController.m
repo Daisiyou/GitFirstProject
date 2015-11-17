@@ -116,11 +116,13 @@
     //Modified by FeiGuangpu
     UIImageView* navBottomLine = [[UIImageView alloc]init];
     navBottomLine.backgroundColor = [UIColor colorWithHexString:@"#dedfe0"];
-    navBottomLine.height = 1;
-    navBottomLine.width = self.navColorOverly.width;
-    navBottomLine.left = 0;
-    navBottomLine.bottom = self.navColorOverly.height;
     [self.navColorOverly addSubview:navBottomLine];
+    [navBottomLine mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.equalTo(self.navColorOverly.mas_width);
+        make.left.equalTo(@0);
+        make.height.equalTo(@1);
+        make.bottom.equalTo(self.navColorOverly.mas_bottom);
+    }];
 }
 
 - (void)setNavBarBgWithColor:(UIColor *)cl
@@ -180,6 +182,18 @@
 }
 
 // Notifies when rotation begins, reaches halfway point and ends.
+
+-(void)viewWillLayoutSubviews
+{
+    if ([UIApplication sharedApplication].statusBarOrientation == UIDeviceOrientationPortrait || [UIApplication sharedApplication].statusBarOrientation == UIDeviceOrientationPortraitUpsideDown)
+    {
+        _navColorOverly.height = 64;
+    }
+    else
+    {
+        _navColorOverly.height = 50;
+    }
+}
 
 
 @end

@@ -143,6 +143,7 @@
 		B9EE1C451BF095D500868811 /* UMSocialSDKResourcesNew.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B9EE1C381BF095D500868811 /* UMSocialSDKResourcesNew.bundle */; settings = {ASSET_TAGS = (); }; };
 		B9EE35E21BDF5C59002796D3 /* UIWindow+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EE35E11BDF5C59002796D3 /* UIWindow+Additions.m */; settings = {ASSET_TAGS = (); }; };
 		B9EE35E51BDF5DAF002796D3 /* BaseScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EE35E41BDF5DAF002796D3 /* BaseScrollView.m */; settings = {ASSET_TAGS = (); }; };
+		B9F3EB201BFB0152003E4B54 /* TabbarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F3EB1F1BFB0152003E4B54 /* TabbarButton.m */; settings = {ASSET_TAGS = (); }; };
 		B9F49D9A1BE9A2EE00BD9239 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F49D991BE9A2EE00BD9239 /* ImageViewController.m */; settings = {ASSET_TAGS = (); }; };
 		B9F49D9F1BE9AD7B00BD9239 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F49D9E1BE9AD7B00BD9239 /* CollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		B9F49DA21BE9DED600BD9239 /* CollectionHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F49DA11BE9DED600BD9239 /* CollectionHeaderCell.m */; settings = {ASSET_TAGS = (); }; };
@@ -386,6 +387,8 @@
 		B9EE35E11BDF5C59002796D3 /* UIWindow+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Additions.m"; sourceTree = "<group>"; };
 		B9EE35E31BDF5DAF002796D3 /* BaseScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseScrollView.h; sourceTree = "<group>"; };
 		B9EE35E41BDF5DAF002796D3 /* BaseScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseScrollView.m; sourceTree = "<group>"; };
+		B9F3EB1E1BFB0152003E4B54 /* TabbarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarButton.h; sourceTree = "<group>"; };
+		B9F3EB1F1BFB0152003E4B54 /* TabbarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabbarButton.m; sourceTree = "<group>"; };
 		B9F49D981BE9A2EE00BD9239 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		B9F49D991BE9A2EE00BD9239 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
 		B9F49D9D1BE9AD7B00BD9239 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
@@ -762,6 +765,8 @@
 				B9C5D6FF1BA6D05800331171 /* AnimateTabbarView.m */,
 				B9C5D7001BA6D05800331171 /* TabBarViewController.h */,
 				B9C5D7011BA6D05800331171 /* TabBarViewController.m */,
+				B9F3EB1E1BFB0152003E4B54 /* TabbarButton.h */,
+				B9F3EB1F1BFB0152003E4B54 /* TabbarButton.m */,
 			);
 			path = TabbarViewController;
 			sourceTree = "<group>";
@@ -1278,6 +1283,7 @@
 				B9C5D6AE1BA6BD2F00331171 /* main.m in Sources */,
 				B9C5D7661BA6D05800331171 /* BaseViewController.m in Sources */,
 				B930CF831BA7C5100039E8BD /* MyCountViewController.m in Sources */,
+				B9F3EB201BFB0152003E4B54 /* TabbarButton.m in Sources */,
 				B9C5D7791BA6D05800331171 /* Config.m in Sources */,
 				B9C5D76D1BA6D05800331171 /* TabBarViewController.m in Sources */,
 				B9C5D7761BA6D05800331171 /* UIView+Sizes.m in Sources */,

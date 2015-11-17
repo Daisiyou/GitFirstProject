@@ -9,6 +9,7 @@
 #import "AnimateTabbarView.h"
 #import "TabBarViewController.h"
 #import "SNNavigationController.h"
+#import "TabbarButton.h"
 
 @interface AnimateTabbarView ()
 {
@@ -30,11 +31,11 @@
         self.buttonArr = [NSMutableArray array];
         g_selectedTag = 10000;
         self.backgroundColor = [UIColor whiteColor];
-        UIButton * previousButton =nil;
+        TabbarButton * previousButton =nil;
         
         for (int i = 0; i < titleArr.count; i++)
         {
-            UIButton* button = [UIButton new];
+            TabbarButton* button = [TabbarButton new];
             [self.buttonArr addObject:button];
             button.backgroundColor = [UIColor clearColor];
             button.titleLabel.font = [UIFont systemFontOfSize:10.0f];
@@ -42,10 +43,8 @@
             [button setTitleColor:[UIColor colorWithHexString:@"#3c3c3c"] forState:UIControlStateNormal];
             [button setTitleColor:[UIColor colorWithHexString:@"#fe640a"] forState:UIControlStateHighlighted];
             [button setTitleColor:[UIColor colorWithHexString:@"#fe640a"] forState:UIControlStateSelected];
-            button.titleEdgeInsets = UIEdgeInsetsMake(32, -24.5, 0, 0);
             [button setImage:[UIImage imageNamed:normalImages[i]] forState:UIControlStateNormal];
             [button setImage:[UIImage imageNamed:selectedImages[i]] forState:UIControlStateSelected];
-            button.imageEdgeInsets = UIEdgeInsetsMake(4, 48, 16, 40);
             [button addTarget:self action:@selector(buttonClickAction:) forControlEvents:UIControlEventTouchUpInside];
             [button setTag:10000 + i];
             if (i == 0) {
@@ -78,7 +77,7 @@
     return self;
 }
 
--(void)callButtonAction:(UIButton *)sender{
+-(void)callButtonAction:(TabbarButton *)sender{
     NSInteger value=sender.tag;
     
     SNNavigationController * navi = nil;
@@ -93,26 +92,26 @@
 
 //移动tabbar
 -(void)moveToTabbarIndex:(NSInteger)index{
-    UIButton *selectBtn;
+    TabbarButton *selectBtn;
     selectBtn = self.buttonArr[10000+ index];
     
     [self buttonClickAction:selectBtn];
 }
 
 -(void)buttonClickAction:(id)sender{
-    UIButton *btn=(UIButton *)sender;
+    TabbarButton *btn=(TabbarButton *)sender;
     if(g_selectedTag==btn.tag)
         return;
     else
         g_selectedTag=btn.tag;
     
-    for (UIButton* otherButton in self.buttonArr) {
+    for (TabbarButton* otherButton in self.buttonArr) {
         otherButton.selected = NO;
     }
     
     btn.selected = YES;
     
-    [self moveShadeBtn:btn];
+    //[self moveShadeBtn:btn];
     [self imgAnimate:btn];
     [self callButtonAction:btn];
     
@@ -120,7 +119,7 @@
 }
 
 
-- (void)moveShadeBtn:(UIButton*)btn{
+- (void)moveShadeBtn:(TabbarButton*)btn{
     
     [UIView animateWithDuration:0.3 animations:
      ^(void){
@@ -130,7 +129,7 @@
      }];
 }
 
-- (void)imgAnimate:(UIButton*)btn{
+- (void)imgAnimate:(TabbarButton*)btn{
     
     [btn.imageView.layer removeAllAnimations];
     CAKeyframeAnimation * animation;
