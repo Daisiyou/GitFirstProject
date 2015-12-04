@@ -81,7 +81,8 @@
     NSInteger value=sender.tag;
     
     SNNavigationController * navi = nil;
-    TabBarViewController * tab = (TabBarViewController*)self.window.rootViewController;
+    //TabBarViewController * tab = (TabBarViewController*)self.window.rootViewController;
+     TabBarViewController * tab =(TabBarViewController*)[UIApplication sharedApplication].keyWindow.rootViewController;
 
     if (tab) {
         navi = tab.viewControllers[0];

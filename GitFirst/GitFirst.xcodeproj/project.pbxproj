@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6B485615175473CA7B4ACE84 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA6B40A688EEDED95A37803 /* libPods.a */; };
+		B9229BFF1C08390B00B4F135 /* Image.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B9229BFE1C08390B00B4F135 /* Image.bundle */; settings = {ASSET_TAGS = (); }; };
 		B92E6D261BE3189800EF38DE /* HomePageScrollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B92E6D251BE3189800EF38DE /* HomePageScrollCell.m */; settings = {ASSET_TAGS = (); }; };
 		B92E6D2C1BE31A3E00EF38DE /* HomePageItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B92E6D2B1BE31A3E00EF38DE /* HomePageItemButton.m */; settings = {ASSET_TAGS = (); }; };
 		B92E6D2F1BE3501D00EF38DE /* CycleScrollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B92E6D2E1BE3501D00EF38DE /* CycleScrollCell.m */; settings = {ASSET_TAGS = (); }; };
@@ -164,6 +165,7 @@
 /* Begin PBXFileReference section */
 		449C905A65E247D16FB5D7E7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9CA6B40A688EEDED95A37803 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9229BFE1C08390B00B4F135 /* Image.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Image.bundle; sourceTree = "<group>"; };
 		B92E6D241BE3189800EF38DE /* HomePageScrollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageScrollCell.h; sourceTree = "<group>"; };
 		B92E6D251BE3189800EF38DE /* HomePageScrollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageScrollCell.m; sourceTree = "<group>"; };
 		B92E6D2A1BE31A3E00EF38DE /* HomePageItemButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageItemButton.h; sourceTree = "<group>"; };
@@ -687,6 +689,7 @@
 				B9C5D6B81BA6BD3000331171 /* Images.xcassets */,
 				B9C5D6BA1BA6BD3000331171 /* LaunchScreen.xib */,
 				B9C5D6AB1BA6BD2F00331171 /* Supporting Files */,
+				B9229BFE1C08390B00B4F135 /* Image.bundle */,
 			);
 			path = GitFirst;
 			sourceTree = "<group>";
@@ -763,10 +766,10 @@
 			children = (
 				B9C5D6FE1BA6D05800331171 /* AnimateTabbarView.h */,
 				B9C5D6FF1BA6D05800331171 /* AnimateTabbarView.m */,
-				B9C5D7001BA6D05800331171 /* TabBarViewController.h */,
 				B9C5D7011BA6D05800331171 /* TabBarViewController.m */,
 				B9F3EB1E1BFB0152003E4B54 /* TabbarButton.h */,
 				B9F3EB1F1BFB0152003E4B54 /* TabbarButton.m */,
+				B9C5D7001BA6D05800331171 /* TabBarViewController.h */,
 			);
 			path = TabbarViewController;
 			sourceTree = "<group>";
@@ -1150,6 +1153,7 @@
 				B9CB86D51BD8C4EA007A53B5 /* ic_filter_category_4@2x.png in Resources */,
 				B9C5D78C1BA6D05800331171 /* tb_service2@2x.png in Resources */,
 				B9C5D6BC1BA6BD3000331171 /* LaunchScreen.xib in Resources */,
+				B9229BFF1C08390B00B4F135 /* Image.bundle in Resources */,
 				B9C5D78D1BA6D05800331171 /* tb_service2@3x.png in Resources */,
 				B9CB86D31BD8C4EA007A53B5 /* ic_filter_category_3@2x.png in Resources */,
 				B930CF921BA7F2D10039E8BD /* irn.png in Resources */,
@@ -1467,6 +1471,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = GitFirstByDai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -1490,6 +1495,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = GitFirstByDai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};

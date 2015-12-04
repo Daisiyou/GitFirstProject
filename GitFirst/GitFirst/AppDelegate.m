@@ -26,6 +26,13 @@ NSString* const Appkey = @"cae3a8ae05154f3b28450794df0fe3e2";
 @implementation AppDelegate
 
 
+- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(nullable NSDictionary *)launchOptions{
+    NSLog(@"will lauched");
+    
+    return YES;
+}
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 //    
@@ -66,7 +73,6 @@ NSString* const Appkey = @"cae3a8ae05154f3b28450794df0fe3e2";
     
     [tabBarController initTabBar];
 }
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
