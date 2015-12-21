@@ -27,12 +27,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
     
-    self.tableViewConstraints = [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.equalTo(self.view);
         make.width.equalTo(self.view);
         make.height.equalTo(self.view);
@@ -49,34 +48,34 @@
    
 }
 
--(void)viewWillLayoutSubviews
-{
-    if (self.tableViewConstraints)
-    {
-        for (MASConstraint *masconstraint in self.tableViewConstraints)
-        {
-            [masconstraint uninstall];
-        }
-    }
-    
-    if ([UIApplication sharedApplication].statusBarOrientation == UIDeviceOrientationPortrait || [UIApplication sharedApplication].statusBarOrientation == UIDeviceOrientationPortraitUpsideDown)
-    {
-        self.tableViewConstraints = [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(64);
-            make.left.equalTo(self.view);
-            make.width.equalTo(self.view);
-            make.height.mas_equalTo(self.view.height - MS_NAVBAR_HEIGHT_WITH_STATUS_BAR - MS_TABBAR_HEIGHT);
-        }];    }
-    else
-    {
-        self.tableViewConstraints = [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(30);
-            make.left.equalTo(self.view);
-            make.width.equalTo(self.view);
-            make.height.mas_equalTo(self.view.height - 30 - MS_TABBAR_HEIGHT);
-        }];
-    }
-}
+//-(void)viewWillLayoutSubviews
+//{
+//    if (self.tableViewConstraints)
+//    {
+//        for (MASConstraint *masconstraint in self.tableViewConstraints)
+//        {
+//            [masconstraint uninstall];
+//        }
+//    }
+//    
+//    if ([UIApplication sharedApplication].statusBarOrientation == UIDeviceOrientationPortrait || [UIApplication sharedApplication].statusBarOrientation == UIDeviceOrientationPortraitUpsideDown)
+//    {
+//        self.tableViewConstraints = [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.top.mas_equalTo(64);
+//            make.left.equalTo(self.view);
+//            make.width.equalTo(self.view);
+//            make.height.mas_equalTo(self.view.height - MS_NAVBAR_HEIGHT_WITH_STATUS_BAR - MS_TABBAR_HEIGHT);
+//        }];    }
+//    else
+//    {
+//        self.tableViewConstraints = [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.top.mas_equalTo(30);
+//            make.left.equalTo(self.view);
+//            make.width.equalTo(self.view);
+//            make.height.mas_equalTo(self.view.height - 30 - MS_TABBAR_HEIGHT);
+//        }];
+//    }
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

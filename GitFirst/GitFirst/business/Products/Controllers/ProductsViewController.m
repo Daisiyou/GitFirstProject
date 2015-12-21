@@ -32,29 +32,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    self.edgesForExtendedLayout = UIRectEdgeBottom;
+//    self.tabBarController.tabBar.hidden = YES;
+    
     self.navi = (SNNavigationController*)self.parentViewController;
     [self.navi setNavBarBgWithImage:[self imageWithColor:[UIColor orangeColor]] WithAlpha:0];
     self.title = @"Product";
     [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
-    self.tableView.top = 0;
-    self.tableView.height = self.tableView.height + MS_NAVBAR_HEIGHT_WITH_STATUS_BAR;
     self.tableView.estimatedRowHeight = 100;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    
-    if (self.tableViewConstraints)
-    {
-        for (MASConstraint *masconstraint in self.tableViewConstraints)
-        {
-            [masconstraint uninstall];
-        }
-        
-        self.tableViewConstraints = [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(0);
-            make.left.equalTo(self.view);
-            make.width.equalTo(self.view);
-            make.height.mas_equalTo(self.view.height - MS_TABBAR_HEIGHT);
-        }];
-    }
     
     leftBtn=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 40, 30)];
     [leftBtn setTitle:@"left" forState:UIControlStateNormal];
@@ -79,7 +65,6 @@
         [weakSelf refresh];
     }];
     
-    // Do any additional setup after loading the view.
 }
 
 

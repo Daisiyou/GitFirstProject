@@ -9,7 +9,7 @@
 #import "HomePageScrollCell.h"
 #import "HomePageItemButton.h"
 
-@interface HomePageScrollCell()
+@interface HomePageScrollCell()<UIScrollViewDelegate>
 
 @end
 
@@ -29,12 +29,12 @@
 -(void)initUI{
     
     UIScrollView *scrollView = [UIScrollView new];
+    scrollView.delegate = self;
     scrollView.showsHorizontalScrollIndicator = NO;
     scrollView.showsVerticalScrollIndicator = NO;
     [self.contentView addSubview:scrollView];
     [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.bottom.equalTo(self.contentView);
-        //make.size.mas_equalTo(CGSizeMake(MS_SCREEN_WIDTH, 100));
         make.height.equalTo(@100);
     }];
     HomePageItemButton * previousButton = nil;
@@ -68,6 +68,27 @@
     }
     
 }
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    //NSLog(@"x: %f, y: %f", scrollView.contentOffset.x, scrollView.contentOffset.y);
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    NSLog(@"endDrag");
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
+   // NSLog(@"endScroll");
+
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+     NSLog(@"endScroll");
+
+}
+
+
+
 
 -(void)click:(id)sender{
     if ([self.delegate respondsToSelector:@selector(beClickedAtSection:andRow:)]) {

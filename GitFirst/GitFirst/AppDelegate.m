@@ -49,6 +49,8 @@ NSString* const Appkey = @"cae3a8ae05154f3b28450794df0fe3e2";
    // [[UIButton appearanceForTraitCollection:[UITraitCollection traitCollectionWithHorizontalSizeClass:(UIUserInterfaceSizeClassUnspecified)] whenContainedInInstancesOfClasses:@[[UINavigationBar class]]] setBackgroundColor:[UIColor orangeColor] forState:(UIControlStateNormal)];
     //[Bugtags startWithAppKey:Appkey invocationEvent:(BTGInvocationEventBubble)];
     
+    
+    
     [self initControllers];
     return YES;
 }
@@ -70,6 +72,7 @@ NSString* const Appkey = @"cae3a8ae05154f3b28450794df0fe3e2";
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
+    self.window.backgroundColor = [UIColor whiteColor];
     
     [tabBarController initTabBar];
 }
