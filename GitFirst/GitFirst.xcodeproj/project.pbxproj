@@ -40,7 +40,6 @@
 		B930CFBA1BA7FB600039E8BD /* InputFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = B930CFB91BA7FB600039E8BD /* InputFieldView.m */; };
 		B930CFBD1BA7FC130039E8BD /* MSDispersedAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = B930CFBC1BA7FC130039E8BD /* MSDispersedAlignment.m */; };
 		B930CFC11BA81F770039E8BD /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = B930CFC01BA81F770039E8BD /* UINavigationController+FDFullscreenPopGesture.m */; };
-		B95239931C4CE323003E79C3 /* Simulator Screen Shot 2016年1月18日 下午5.08.16.png in Resources */ = {isa = PBXBuildFile; fileRef = B95239921C4CE323003E79C3 /* Simulator Screen Shot 2016年1月18日 下午5.08.16.png */; settings = {ASSET_TAGS = (); }; };
 		B978A2C51BD5E07900BA33F5 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B978A2C41BD5E07900BA33F5 /* NextViewController.m */; settings = {ASSET_TAGS = (); }; };
 		B978A2C81BD5EBEE00BA33F5 /* NextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B978A2C71BD5EBEE00BA33F5 /* NextCell.m */; settings = {ASSET_TAGS = (); }; };
 		B9C5D6AE1BA6BD2F00331171 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C5D6AD1BA6BD2F00331171 /* main.m */; };
@@ -225,7 +224,6 @@
 		B930CFBC1BA7FC130039E8BD /* MSDispersedAlignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDispersedAlignment.m; sourceTree = "<group>"; };
 		B930CFBF1BA81F770039E8BD /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		B930CFC01BA81F770039E8BD /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
-		B95239921C4CE323003E79C3 /* Simulator Screen Shot 2016年1月18日 下午5.08.16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot 2016年1月18日 下午5.08.16.png"; sourceTree = "<group>"; };
 		B978A2C31BD5E07900BA33F5 /* NextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
 		B978A2C41BD5E07900BA33F5 /* NextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
 		B978A2C61BD5EBEE00BA33F5 /* NextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextCell.h; sourceTree = "<group>"; };
@@ -838,7 +836,6 @@
 		B9C5D7221BA6D05800331171 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				B95239921C4CE323003E79C3 /* Simulator Screen Shot 2016年1月18日 下午5.08.16.png */,
 				B9C5D7231BA6D05800331171 /* ErrorView */,
 				B9C5D7281BA6D05800331171 /* Navbar */,
 				B9C5D72B1BA6D05800331171 /* Tabbar */,
@@ -1171,7 +1168,6 @@
 				B9CB86FF1BD8C83C007A53B5 /* h3.jpg in Resources */,
 				B9CB86C91BD8C4EA007A53B5 /* ic_filter_category_0@2x.png in Resources */,
 				B9C5D78B1BA6D05800331171 /* tb_service1@3x.png in Resources */,
-				B95239931C4CE323003E79C3 /* Simulator Screen Shot 2016年1月18日 下午5.08.16.png in Resources */,
 				B930CFAE1BA7F8800039E8BD /* IQKeyboardManager.bundle in Resources */,
 				B9C5D77F1BA6D05800331171 /* teapot@3x.png in Resources */,
 				B9C5D7881BA6D05800331171 /* tb_search2@2x.png in Resources */,
