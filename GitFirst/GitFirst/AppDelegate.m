@@ -29,6 +29,8 @@ NSString* const Appkey = @"cae3a8ae05154f3b28450794df0fe3e2";
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(nullable NSDictionary *)launchOptions{
     NSLog(@"will lauched");
     
+    // nihao
+    
     return YES;
 }
 
